@@ -1,0 +1,84 @@
+/* pages/login/index.wxss */
+.out{
+  width: 100%;
+  padding: 0 55rpx;
+  box-sizing: border-box;
+}
+.toppic{
+  width: 100%;
+  height: 330rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toppic image{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 20rpx;
+}
+.zhanghao{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #eee;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.zhanghao-l{
+  width: 50rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.zhanghao-r{
+  width: 580rpx;
+  height:100%;
+}
+.zhanghao-r input{
+width: 580rpx;
+  height:100%;
+  font-size: 30rpx;
+}
+.zhanghao-l image{
+  width: 33rpx;
+  height: 40rpx;
+}
+.wjmm{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.wjmm view{
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  color: #999;
+}
+.submit{
+  width: 100%;
+  height: 95rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30rpx;
+   background: -webkit-linear-gradient(left, #fe7139 , #f64734); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right,#fe7139 , #f64734); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #fe7139 , #f64734); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #fe7139 , #f64734); /* 标准的语法 */
+  border-radius: 10rpx;
+  margin-top: 15rpx;
+
+}
+.zhuce{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #f64734;
+  margin-top: 40rpx;
+}

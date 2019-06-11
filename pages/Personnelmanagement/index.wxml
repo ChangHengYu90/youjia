@@ -1,0 +1,62 @@
+<import src="../../template/index.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<view class='top'>
+  <view class='top-t'>
+    <view class='top-t-t'>
+      <view class='top-t-t-l'>楼盘名称</view>
+      <view class='top-t-t-r'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+            <image src='/image/32.png'></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='top-t-b'>
+      <view class='top-t-t-l'>待分配客户
+        <span>{{dfpnum}}人</span> 
+      </view>
+      <view class='top-t-b-r' catchtap='gofenpei'>分配</view>
+    </view>
+  </view>
+  <view class='top-b'>
+    <view class='top-t-t-l'>置业顾问
+      <span>{{zygwnum}}人</span>
+    </view>
+    <view class='top-t-b-r2' catchtap='goadd'>添加</view>
+  </view>
+</view>
+<view class='topkb'></view>
+<view class='list' wx:for="{{list}}" wx:key="*" wx:for-index="index">
+  <view class='list-l'>
+    <view class='list-l-l'>
+      <image src='{{item.headImg}}'></image>
+    </view>
+    <view class='list-l-r'>
+      <view class='list-l-rcon'>
+      <view class='list-l-rcon-t'>{{item.name}}</view>
+      <view class='list-l-rcon-b'>{{item.mobile}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='list-r'>
+    <view catchtap='gogh' data-index="{{index}}">
+      <view  class='list-rcon-t'>
+       <image src='{{apis}}/image/zhuanhuan.png'></image>
+      </view>
+      <view  class='list-rcon-b'>
+       更换
+      </view>  
+    </view>
+    <view>
+    <view  class='list-rcon-t' catchtap='godel' data-id="{{item.id}}">
+       <image src='/image/close.png'></image>
+      </view>
+      <view  class='list-rcon-b'>
+       删除
+      </view>
+    </view>
+  </view>
+</view>
+<view class='dbkb'></view>

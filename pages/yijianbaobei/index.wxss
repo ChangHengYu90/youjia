@@ -1,0 +1,317 @@
+/* pages/mendian/index.wxss */
+
+page {
+  background-color: #fafafa;
+}
+
+.mdtop {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ddd;
+  position: fixed;
+  top: 0rpx;
+}
+
+.mdtopkb {
+  width: 100%;
+  height: 100rpx;
+}
+
+.mdtop-l {
+  width: 670rpx;
+  height: 70rpx;
+  margin-left: 40rpx;
+  border-radius: 35rpx;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mdtop-l-l {
+  width: 80rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mdtop-l-l image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.mdtop-l input {
+  width: 500rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+}
+
+.mdtop-r {
+  height: 100%;
+  margin-left: 10rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.bbcon {
+  width: 100%;
+  height: 170rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee;
+  background-color: #fff;
+}
+
+.bbcon-l {
+  width: 100%;
+  height: 170rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bbcon-r {
+  width: 90rpx;
+  height: 48rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+  font-size: 22rpx;
+  color: #fff;
+}
+
+.bbcon-rcolor {
+  background-color: #f1552f;
+}
+
+.bbcon-rcolor2 {
+  background-color: #c9c9c9;
+}
+
+.bbcon-l-l {
+  width: 190rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bbcon-l-l image {
+  width: 170rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+}
+
+.bbcon-l-r-t {
+  height: 50rpx;
+  font-size: 34rpx;
+  color: #000;
+}
+
+.bbcon-l-r-b {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.bottomkb {
+  width: 100%;
+  height: 100rpx;
+}
+
+.bottom {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.bottom-r {
+  width: 340rpx;
+  height: 100%;
+  background: -webkit-linear-gradient(left, #fe7237, #f44832); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #fe7237, #f44832); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #fe7237, #f44832); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #fe7237, #f44832); /* 标准的语法 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.bottom-r image {
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 10rpx;
+}
+
+.bottom-l {
+  width: 410rpx;
+  height: 100%;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #000;
+  background-color: #fff;
+}
+
+.bottom-l image {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.bottom-l span {
+  color: #f44832;
+  margin: 0 10rpx;
+}
+
+.tck {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 100rpx;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tckcon {
+  width: 100%;
+  height: 480rpx;
+}
+
+.tckcon-t {
+  width: 100%;
+  height: 80rpx;
+  background-color: #eee;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tckcon-t-l {
+  font-size: 30rpx;
+}
+
+.tckcon-t-r {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #999;
+  line-height: 80rpx;
+}
+
+.tckcon-t-r image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.tckcon-b {
+  width: 100%;
+  height: 400rpx;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.tckcon-bcon {
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee;
+}
+
+.tckcon-bcon-r {
+  width: 90rpx;
+  height: 45rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  background-color: #fe0000;
+}
+
+.tckcon-bcon-l-t {
+  height: 50rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.tckcon-bcon-l-b {
+  font-size: 24rpx;
+  color: #999;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.tstck{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tstckcon{
+  width: 560rpx;
+  height: 350rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 45rpx 60rpx;
+  box-sizing: border-box;
+}
+.tstckcon-t{
+  width: 100%;
+  height: 180rpx;
+  font-size: 32rpx;
+  color: #000;
+  line-height: 1.5;
+}
+.tstckcon-b{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tstckcon-b view{
+  width: 250rpx;
+  height: 78rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f44832;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 30rpx;
+}

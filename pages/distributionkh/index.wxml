@@ -1,0 +1,23 @@
+<view class='list' wx:for="{{list}}" wx:key="*" wx:for-index="index" >
+  <view class='list-l' >
+    <view>
+      <view class='list-l-t'>
+        {{item.name}}
+      </view>
+      <view class='list-l-b'>
+        {{item.mobile}}
+      </view>
+    </view>
+
+  </view>
+  <view class='list-r' catchtap='choose' data-id="{{item.isshow}}" data-index="{{index}}">
+    <image src="{{item.isshow==1?'/image/wxuanzhong.png':'/image/xuanzhong.png'}}"></image>
+  </view>
+</view>
+<view class='bottomkb'  wx:if="{{list.length>0}}"></view>
+<view class='bottom' wx:if="{{list.length>0}}">
+  <view class='bottomcon' catchtap='choosegw'>选择置业顾问</view>
+</view>
+<view class='zwsj'  wx:if="{{list.length==0}}">
+暂无数据
+</view>

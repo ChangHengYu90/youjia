@@ -1,0 +1,154 @@
+/* pages/mendiangh/index.wxss */
+page{
+  background-color: #fafafa;
+}
+.mdgh{
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mdghcon{
+  width: 685rpx;
+  height: 185rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx #ddd;
+  background-color: #fff;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mdghcon-l{
+  width: 165rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mdghcon-l image{
+  width: 115rpx;
+  height: 115rpx;
+  border-radius: 50%;
+}
+.mdghcon-r-t{
+  width: 480rpx;
+  display: flex;
+  flex-direction: row;
+  height: 40rpx;
+}
+.mdghcon-r-t-l{
+  height: 40rpx;
+  display: flex;
+  align-items: flex-end;
+  font-size: 32rpx;
+}
+.mdghcon-r-t-r{
+  height: 40rpx;
+  display: flex;
+  align-items: flex-end;
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 10rpx;
+}
+.mdghcon-r-b{
+  width: 100%;
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+.mdghcon-r-b span{
+  color: #999;
+}
+.ghts{
+  width: 100%;
+  height: 90rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #999;
+  background-color: #fff;
+  }
+  .mdlist{
+   width: 100%;
+  height: 90rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #ddd
+  }
+  .mdlist-r{
+    width: 90rpx;
+    height: 45rpx;
+    border-radius: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    color: #fff;
+    background-color: #f2542f
+  }
+  .tcc{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tcccon{
+    width: 555rpx;
+    height: 340rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    padding: 60rpx 40rpx;
+    box-sizing: border-box;
+
+  }
+  .tcccon-t{
+    width: 100%;
+    height: 170rpx;
+    font-size: 32rpx;
+    line-height: 1.7;
+  }
+  .tcccon-t span{
+    color: #f2542f
+  }
+  .tcccon-b{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .tcccon-b-l{
+    width: 170rpx;
+    height: 76rpx;
+    border-radius: 15rpx;
+    background-color: #fa6137;
+    color: #fff;
+    font-size: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tcccon-b-r{
+    width: 170rpx;
+    height: 76rpx;
+    border-radius: 15rpx;
+    background-color: #bfbfbf;
+    color: #fff;
+    font-size: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

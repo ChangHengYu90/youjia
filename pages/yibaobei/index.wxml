@@ -1,0 +1,41 @@
+
+<view class='content' wx:for="{{list}}" wx:key="*">
+  <view class='content-b'>
+    <view class='content-b-l'>
+      <view class='content-b-l-t'>{{item.name}}
+        <span>{{item.mobile}}</span>
+      </view>
+      <view class='content-b-l-b'>
+        <span>报备楼盘：</span>{{item.hourseName}}
+      </view>
+      <view class='content-b-l-b'>
+        <span>提交时间：</span>{{item.date}}
+      </view>
+      <view class='content-b-l-b'>
+        <span>预计看房：</span>{{item.visitTime}}
+      </view>
+    </view>
+    <view class='content-b-r' >
+      
+      <view class='baobeits'>
+        报备保护日期
+      </view>
+      <view class='baobeitime'>
+        <view>{{item.reportProtectionTime}}</view>
+      </view>
+      <view class='khmsout'><view class='khms' catchtap='showkhms'>客户描述</view></view> 
+      
+    </view>
+  </view>
+</view>
+<view class='zwsj' wx:if="{{list.length==0}}">
+
+</view>
+<view class='zz' catchtap='closekhms' wx:if="{{khmsid==1}}">
+   <view class='zzcon' catchtap='zzmp'>
+      <view class='zzcon-t'>客户描述</view>
+      <view class='zzcon-z'>
+      <textarea placeholder='填写客户基本资料...' disabled='true'></textarea>
+      </view>
+   </view>
+</view>

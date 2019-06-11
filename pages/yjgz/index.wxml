@@ -1,0 +1,13 @@
+<view class='content'>
+  <view class='content-t'>
+    <span>佣金:</span>{{rate}}
+  </view>
+  <rich-text nodes="{{gz}}" style='font-size:30rpx'></rich-text>
+</view>
+<view class='bottomkb' wx:if="{{type!=1}}"></view>
+<view class='bottom' wx:if="{{type!=1}}">
+  <view catchtap='bdphone'>
+    <image src='{{apis}}/image/36.png'></image>
+    项目经理
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<view class='addcon'>
+  <view class='addcon-t'>请输入门店名称</view>
+  <view class='addcon-srk'>
+    <input placeholder='门店名称' bindinput='hqmdname'></input>
+  </view>
+  <view class='submit' catchtap='submit'>确定添加</view>
+</view>

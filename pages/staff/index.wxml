@@ -1,0 +1,30 @@
+<import src="../../template/index.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<view class='mdtop'>
+  <view class='mdtop-l'>
+    <view class='mdtop-l-l'>
+      <image src='{{apis}}/image/sousuo.png'></image>
+    </view>
+    <input placeholder='请输入门店名称' type='text' confirm-type='search' bindconfirm='gosearch' ></input>
+  </view>
+
+</view>
+<view class='mdtopkb'></view>
+<view class='mdcon-yg' catchtap='golookxq' wx:for="{{list}}" wx:key="*" id='{{item.id}}'>
+  <view class='mdcon-yg-l'>
+    <image src='{{item.headImg}}'></image>
+    <view class='mdcon-yg-l-r'>
+      <view class='mdcon-yg-l-r-t'>{{item.name}}
+        <span>{{item.mobile}}</span>
+      </view>
+      <view class='mdcon-yg-l-r-b'>
+        <span>门店：</span>{{item.storeName}}</view> 
+    </view>
+  </view>
+  <view class='mdcon-yg-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view wx:if="{{list.length==0}}" class='zwsj'>
+暂无数据
+</view>

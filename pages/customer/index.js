@@ -1,0 +1,469 @@
+// pages/customer/index.js
+var template = require('../../template/index.js');
+var app = getApp()
+const util = require('../../utils/util.js');
+Page({
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    apis: app.data.href,
+    state:0,
+    page:1,
+    name: '',
+    num:0,
+    titleid:1,
+    idInvalid:1,
+    khmsid:0,
+    description:''
+  },  
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    var that = this
+    template.tabbar2("tabBar", 1, this)//0表示第一个tabbar
+    that.getlist()
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    var that = this
+    let yeshu = parseInt(that.data.page) + 1
+    that.setData({
+      page: yeshu
+    })
+    let titleid = that.data.titleid
+    if (titleid==1){
+      that.getlist()
+    }else{
+      that.getzygwlist()
+    }
+    
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  getlist() {
+    var that = this
+    let id = wx.getStorageSync('user').id
+    let name = that.data.name
+    let foptions = [
+
+      'leadId' + id,
+      'page' + that.data.page,
+      'state' + that.data.state
+    ]
+    let data = {
+      leadId: id,
+      state: that.data.state,
+      page: that.data.page
+    }
+    if (name != '') {
+      foptions.push('name' + name)
+      data.name = name
+    }
+    util.requestLoading(that.data.apis + '/api/project/mycustomerlist.aspx', foptions, data, '', function (res) {
+      console.log(res)
+      if (res.code == '200') {
+        let shuju = res
+        let num = that.data.num
+        num++
+        for (let i = 0; i < shuju.data.length; i++) {
+          shuju.data[i].hourseName = decodeURIComponent(shuju.data[i].hourseName)
+          shuju.data[i].name = decodeURIComponent(shuju.data[i].name)
+          shuju.data[i].brokerName = decodeURIComponent(shuju.data[i].brokerName)
+          shuju.data[i].description = decodeURIComponent(shuju.data[i].description)
+        }
+        console.log(shuju)
+        if (that.data.page == 1) {
+          console.log(num)
+          if(num==1){
+            that.setData({
+              bblist: shuju,
+              bblist2: shuju,
+              num: num
+            })
+          }else{
+            that.setData({
+              bblist: shuju,
+              bblist2: shuju,
+            })
+          }
+          
+        } else {
+          
+          let yuanshuju = that.data.bblist
+          yuanshuju.data = yuanshuju.data.concat(shuju.data)
+        
+          that.setData({
+            bblist: yuanshuju,
+            bblist2: yuanshuju,
+          })
+        }
+
+      } else {
+        wx.showToast({
+          title: res.message,
+          icon: 'none',
+          duration: 1000
+        })
+      }
+    }, function (res) {
+      console.log(res)
+    })
+  },
+  hqname(e) {
+    var that = this
+    that.setData({
+      name: e.detail.value.replace(/\s+/g, ''),
+      page:1
+    })
+    if (that.data.titleid==1){
+      that.getlist()
+    }else{
+      that.getzygwlist()
+    }
+    
+  },
+  goqhtype(e) {
+    var that = this
+    that.setData({
+      state: e.currentTarget.id,
+      page: 1,
+
+    })
+    that.getlist()
+  },
+  godel(e) {
+    var that = this
+    let bbid = e.currentTarget.id
+    let id = wx.getStorageSync('user').id
+    let foptions = [
+      'brokerId' + id,
+      'id' + bbid,
+
+    ]
+    let data = {
+      brokerId: id,
+      id: bbid,
+    }
+
+    util.requestLoading(that.data.apis + '/api/user/deletereport.aspx', foptions, data, '', function (res) {
+      console.log(res)
+      wx.showToast({
+        title: res.message,
+        icon: 'none',
+        duration: 1000
+      })
+      if (res.code == '200') {
+        that.setData({
+          page: 1,
+          num: 0
+        })
+        that.getlist()
+      } else {
+
+      }
+    }, function (res) {
+      console.log(res)
+    })
+  },
+  goqueren(e){
+    var that = this
+   let id = e.currentTarget.id
+   let type = e.currentTarget.dataset.type
+    let userid = wx.getStorageSync('user').id
+    let foptions = [
+      'leadId' + userid,
+      'id' + id,
+      'type' + type
+    ]
+    let data = {
+      leadId: userid,
+      id: id,
+      type: type
+    }
+
+    util.requestLoading(that.data.apis + '/api/project/changereport.aspx', foptions, data, '', function (res) {
+      console.log(res)
+      wx.showToast({
+        title: res.message,
+        icon: 'none',
+        duration: 1000
+      })
+      if (res.code == '200') {
+        that.setData({
+          page: 1
+        })
+        that.getlist()
+      } else {
+
+      }
+    }, function (res) {
+      console.log(res)
+    })
+  },
+  qrdf(e){
+    var that = this
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: [ 'camera'],
+      success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        console.log(res)
+        let  img = res.tempFilePaths[0]
+        let userid = wx.getStorageSync('user').id
+        let id = e.currentTarget.id
+        let foptions = [
+          'leadId' + userid,
+          'id' + id,
+        ]
+        let data = {
+          leadId: userid,
+          id: id,
+        }
+        let timeStamp = new Date().getTime();
+        foptions.sort();
+        let newstr = foptions.join("");
+        let requestCheck = newstr + timeStamp + '3c4510874e6407bf53bbe';
+      
+        requestCheck = util.md5(requestCheck).toLocaleLowerCase();
+        console.log(requestCheck)
+        let headerData = {
+          "timeStamp": timeStamp,
+          "requestCheck": requestCheck,
+          "Content-Type": "application/x-www-form-urlencoded"
+        };
+        wx.showLoading({
+          title: '上传中...',
+        })
+        wx.uploadFile({
+          url: that.data.apis + '/api/project/confirmvisit.aspx', // 仅为示例，非真实的接口地址
+          filePath: img,
+          name: 'image',
+          formData: {
+            leadId: userid,
+            id: id
+          },
+          header: headerData,
+          success(res) {
+             wx.hideLoading()
+            let shuju = JSON.parse(res.data)
+              wx.showToast({
+                title: shuju.message,
+                icon: 'none',
+                duration: 1000
+              })
+              if(shuju.code=='200'){
+                that.setData({
+                  page: 1
+                })
+                that.getlist()
+              }
+             console.log(res)
+          },
+          fail:function(){
+            wx.hideLoading()
+          }
+        })
+
+      }
+    })
+  },
+  gobdphone(e){
+    var that = this
+    let id = e.currentTarget.id+''
+    wx.makePhoneCall({
+      phoneNumber: id,
+    })
+  },
+  chooseidInvalid(e){
+    var that = this
+    that.setData({
+      zylist:'',
+      idInvalid:e.currentTarget.id,
+      page:1
+    })
+    that.getzygwlist()
+  },
+  choosetitle(e){
+    var that = this
+    that.setData({
+      titleid: e.currentTarget.id,
+      page:1
+    })
+    if (e.currentTarget.id==1){
+      that.getlist()
+    }else{
+      that.getzygwlist()
+    }
+  },
+  showkhms(e) {
+    var that = this
+    let content  = e.currentTarget.dataset.content
+    that.setData({
+      khmsid: 1,
+      description: content
+    })
+  },
+  closekhms() {
+    var that = this
+    that.setData({
+      khmsid: 0
+    })
+  },
+  ggsx(e){
+    var that = this
+    let userid = wx.getStorageSync('user').id
+    let id = e.currentTarget.dataset.id
+    wx.showModal({
+      title: '提示',
+      content: '确认将此用户的状态改为失效状态?',
+      success(res) {
+        if (res.confirm) {
+          let foptions = [
+            'leadId' + userid,
+            'id' + id,
+            
+          ]
+          let data = {
+            leadId: userid,
+            id: id,
+          
+          }
+          util.requestLoading(that.data.apis + '/api/project/changevalid.aspx', foptions, data, '', function (res) {
+            console.log(res)
+
+            if (res.code == '200') {
+             that.setData({
+               page:1,
+             })
+             that.getzygwlist()
+            } else {
+              wx.showToast({
+                title: res.message,
+                icon: 'none',
+                duration: 1000
+              })
+            }
+          }, function (res) {
+            console.log(res)
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+  getzygwlist(){
+    var that = this
+    let userid = wx.getStorageSync('user').id
+    let page = that.data.page
+    let isValid = that.data.idInvalid
+    let name = that.data.name.replace(/(^\s*)/g, "");
+    let foptions = [
+      'leadId' + userid,
+      'isValid' + isValid,
+      'page' + page
+    ]
+    let data = {
+      leadId: userid,
+      isValid: isValid,
+      page: page
+    }
+    if (name != '' && name != null && name!=undefined){
+      foptions.push('name' + name)
+      data.name = name
+    }
+    util.requestLoading(that.data.apis + '/api/project/mypropertyconsultantcustomerlist.aspx', foptions, data, '', function (res) {
+      console.log(res)
+     
+      if (res.code == '200') {
+        let shuju = res.data
+        for(let i=0;i<shuju.length;i++){
+          shuju[i].hourseName = decodeURIComponent(shuju[i].hourseName)
+          shuju[i].propertyConsultantName = decodeURIComponent(shuju[i].propertyConsultantName)
+          shuju[i].name = decodeURIComponent(shuju[i].name)
+        }
+        if(page==1){
+          that.setData({
+            yxnum: res.dataCount1,
+            wxnum: res.dataCount0,
+            zylist: shuju
+          })
+        }else{
+          that.setData({
+            yxnum: res.dataCount1,
+            wxnum: res.dataCount0,
+            zylist: that.data.zylist.concat(shuju)
+          })
+        }
+       
+      } else {
+        wx.showToast({
+          title: res.message,
+          icon: 'none',
+          duration: 1000
+        })
+      }
+    }, function (res) {
+      console.log(res)
+    })
+  },
+  jjrgjjl(e){
+    wx.navigateTo({
+      url: '../khjjrgjjl/index?id=' + e.currentTarget.dataset.id + '&name=' + e.currentTarget.dataset.name + '&phone=' + e.currentTarget.dataset.phone
+    })
+  },
+  zygwgjjl(e){
+    wx.navigateTo({
+      url: '../zygjjl/index?id=' + e.currentTarget.dataset.id + '&name=' + e.currentTarget.dataset.name + '&phone=' + e.currentTarget.dataset.phone + '&zyid=' + e.currentTarget.dataset.zyid,
+    })
+  }
+
+})

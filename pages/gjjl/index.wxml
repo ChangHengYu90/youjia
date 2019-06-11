@@ -1,0 +1,58 @@
+<view class='name'>
+  <view class='name-l'>客户姓名</view>
+  <view class='name-r'>
+  {{name}}
+  <!-- <input value='{{name}}' placeholder='请输入客户姓名' confirm-type='done' type='text' bindconfirm='getname'></input> -->
+  </view>
+</view>
+<view class='name2'>
+  <view class='name-l'>客户手机</view>
+  <view class='name-r'>
+  {{phone}}
+  </view>
+</view>
+<view class='gjjl'>
+  <view class='gjjl-l'>
+    跟进记录
+    <span>{{gjjllist.length}}条</span>
+  </view>
+  <view class='gjjl-r' catchtap='gotjjl'>添加</view>
+</view>
+<view class='gjjlcon'>
+  <view class='gjjlcon-c' wx:for="{{gjjllist}}" wx:key="*">
+    <view class='gjjlcon-c-l'>
+      <view class='gjjlcon-c-lpic'>
+        <image src='{{apis}}/image/45.png'></image>
+      </view>
+
+      <view class='xian'></view>
+    </view>
+    <view class='gjjlcon-c-r'>
+    <!-- <view class='gjjlcon-c-r-b'>姓名</view> -->
+      <view class='gjjlcon-c-r-t'>
+      
+        <view class='gjjlcon-c-r-t-l'>{{item.date}}</view>
+        <view class='gjjlcon-c-r-t-r' id='{{item.id}}' catchtap='deljl'>
+          <image src='{{apis}}/image/33.png'></image>
+          删除
+        </view>
+      </view>
+      <view class='gjjlcon-c-r-b'>{{item.remark}}</view>
+    </view>
+  </view>
+
+
+</view>
+
+<view class='tcc' wx:if="{{istck==1}}">
+  <view class='tcccon'>
+    <view class='tcccon-t'>
+    <textarea placeholder='请输入记录详情' maxlength='200' value='{{tjjlcon}}' bindinput='hqaddgjjl'></textarea>
+    </view>
+    <view class='tcccon-b'>
+      <view class='tcccon-b2' catchtap='closetcc'>取消</view>
+      <view class='tcccon-b1' catchtap='addgjjl'>确定</view>
+
+    </view>
+  </view>
+</view>

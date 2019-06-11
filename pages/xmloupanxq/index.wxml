@@ -1,0 +1,170 @@
+<view class='lpxqtop'>
+  <button class='share' open-type='share' >
+    <image src='{{apis}}/image/fenxiang.png'></image>
+    分享</button>
+  <view class='lbnum'>共{{loupan.imageCount}}张</view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper'  catchtap='golookpic'>
+    <swiper-item wx:for="{{loupanpic}}" wx:key="*">
+      <image src="{{item}}" />
+    </swiper-item>
+    
+  </swiper>
+</view>
+<view class='lpname'>
+  <!-- <view class='dianz' catchtap='goguanzhu' data-isFollow="{{loupan.isFollow}}">
+    <view class='dianz-t'>
+    
+      <image src="{{loupan.isFollow==1?'{{apis}}/image/tianjiaguanzhu2.png':'{{apis}}/image/tianjiaguanzhu.png'}}"></image>
+    </view>
+
+    <view class='dianz-b2'>
+      <span>关注</span>{{loupan.followCount}}
+    </view>
+  </view> -->
+  <view class='lpname-t'>{{loupan.name}}</view>
+  <view class='lpname-bq'>
+    <view class='lpname-bqcon'>{{loupan.saleStateName}}</view>
+    <view class='lpname-bqcon2'>{{loupan.propertyTypeName}}</view>
+    <view class='lpname-bqcon2'>{{loupan.buildingTypeName}}</view>
+    <view class='lpname-bqcon2'>{{loupan.decorationStandardName}}</view>
+  </view>
+  <view class='lpjj'>
+    {{loupan.averagePrice}}
+    <span class='pfjj'>元/m²</span>
+    <span class='pfjjts'>楼盘均价</span>
+  </view>
+  <view class='sldz' catchtap='godaohang' id='{{loupan.salesOfficeAddress}}'>
+    <view class='sldz-l'>
+      <span>售楼地址：</span>{{loupan.salesOfficeAddress}}
+    </view>
+    <view class='sldz-r'>
+      <image src='{{apis}}/image/18.png'></image>
+    </view>
+  </view>
+  <view class='lpcjl'>
+    <view class='lpcjlcon-l'>
+      <view class='lpcjlcon-l-t'>{{loupan.reportCount}}</view>
+      <view class='lpcjlcon-l-b'>报备量</view>
+    </view>
+    <view class='lpcjlcon-z'>
+      <view class='lpcjlcon-l-t2'>{{loupan.visitCount}}</view>
+      <view class='lpcjlcon-l-b2'>到访量</view>
+    </view>
+    <view class='lpcjlcon-l'>
+      <view class='lpcjlcon-l-t3'>{{loupan.turnoverCount}}</view>
+      <view class='lpcjlcon-l-b3'>成交量</view>
+    </view>
+  </view>
+</view>
+
+<view class='yongjin' catchtap='gollokyj' id='1'>
+  <view class='yongjin-l'>
+    <image src='{{apis}}/image/19.png'></image>
+    <span class='yongjin-yj'>佣金：</span>
+    <span class='yongjin-yjxq'>{{loupan.rate1}}</span>
+  </view>
+  <view class='yongjin-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<!-- <view class='yongjin' catchtap='gollokyj' id='2'>
+  <view class='yongjin-l'>
+    <image src='{{apis}}/image/19.png'></image>
+    <span class='yongjin-yj'>机构经纪人佣金：</span>
+    <span class='yongjin-yjxq'>{{loupan.rate2}}</span>
+  </view>
+  <view class='yongjin-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view class='yongjin' catchtap='gollokyj' id='3'>
+  <view class='yongjin-l'>
+    <image src='{{apis}}/image/19.png'></image>
+    <span class='yongjin-yj'>独立经纪人佣金：</span>
+    <span class='yongjin-yjxq'>{{loupan.rate3}}</span>
+  </view>
+  <view class='yongjin-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view> -->
+<view class='yongjin' catchtap='golookqk'>
+  <view class='yongjin-l'>
+    <image src='{{apis}}/image/20.png'></image>
+    确客规则
+  </view>
+  <view class='yongjin-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view class='zxdt' catchtap='goloupandt'>
+  <view class='zxdt-t'>最新动态（{{loupan.newsCount}}）</view>
+  <view class='zxdt-time' wx:if="{{loupan.newsCount!=0}}">{{loupan.newsFirst.date}}</view>
+  <view class='zxdt-js' wx:if="{{loupan.newsCount!=0}}">{{loupan.newsFirst.title}}</view>
+  <view class='zxdt-tp' wx:if="{{loupan.newsCount!=0}}">
+    <image src='{{item}}' wx:for="{{loupan.newsFirst.imageList}}" wx:key="*"></image>
+
+  </view>
+</view>
+<view class='zxdt'>
+  <view class='zxdt-t'>楼盘信息</view>
+  <view class='loupxx'>
+    <view class='loupxx-l'>
+      <span>开盘：</span>{{loupan.openingDate}}</view>
+    <view class='loupxx-r'>
+      <span>交房：</span>{{loupan.deliveryDate}}</view>
+  </view>
+  <view class='loupxx'>
+    <view class='loupxx-l2'>
+      <span class="kfs">开发商：</span>{{loupan.developer}}</view>
+  </view>
+  <view class='loupxx' catchtap='golookzb' id='{{loupan.address}}'>
+    <view class='loupxx-l2'>
+      <span class="kfs">楼盘地址：</span>{{loupan.address}}
+    </view>
+    <view class='loupxx-r2'>
+      <image src='{{apis}}/image/18.png'></image>
+      周边</view>
+  </view>
+  <view class='morelp' catchtap='gomorelp'>更多楼盘信息</view>
+</view>
+<!-- 有的有 -->
+<!-- <view class='zxdt'>
+  <view class='zxdt-t'>同城推荐</view>
+  <view class='tctj'>
+    <view class='tctjcon' wx:for="{{loupan.recList}}" wx:key="*" id='{{item.id}}'>
+      <view class='tctjcon-t'>
+        <image src='{{item.image}}'></image>
+      </view>
+      <view class='tctjcon-name'>
+        {{item.name}}
+      </view>
+      <view class='tctjcon-yj'>
+        佣金：{{item.rate}}
+      </view>
+      <view class='tctjcon-dz'>
+        {{item.district}}
+      </view>
+    </view>
+  </view>
+</view> 
+<view class='bottomkb'></view>
+<view class='bottom'>
+  <view class='bottom-l' catchtap='bdphone'>
+    <view class='bottom-l-t'>
+      <image src='{{apis}}/image/34.png'></image>
+    </view>
+    <view class='bottom-l-b'>项目经理</view>
+  </view>
+  <view class='bottom-l' catchtap='goyibaobei' id='{{loupan.myReportCount}}'>
+    <view class='bottom-l-t'>
+      <image src='{{apis}}/image/35.png'></image>
+    </view>
+    <view class='bottom-l-b'>已报备({{loupan.myReportCount}})</view>
+  </view>
+  <view class='bottom-r' catchtap='gobaobeikh'>
+    
+      <image src='{{apis}}/image/kechengbaoming.png'></image>
+     报备客户
+  </view>
+</view>
+-->

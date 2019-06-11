@@ -1,0 +1,18 @@
+<view class='name'>
+<view class='name-l'>客户姓名</view>
+<view class='name-r' ><input placeholder='请输入' maxlength='20' value='{{name}}' bindinput='hqname' ></input></view>
+</view>
+<view class='name2'>
+<view class='name-l'>客户手机</view>
+<view class='name-r' ><input placeholder='请输入' value='{{phone}}' type='number' maxlength='11' bindinput='hqphone'></input></view>
+</view>
+<view class='lpname' wx:if="{{isyc==1}}">
+  <view class='lpname-l'>开启号码隐藏</view>
+  <view class='lpname-r'>
+    <switch class="tui-fr" checked="{{zt}}" bindchange="changeSwitch1" />
+  </view>
+</view>
+<view class='bottomkb'></view>
+<view class='bottom'>
+  <view catchtap='submit'>确认修改</view>
+</view>

@@ -1,0 +1,25 @@
+<view class='mdtop'>
+  <view class='mdtop-l'>
+    <view class='mdtop-l-l'>
+      <image src='{{apis}}/image/sousuo.png'></image>
+    </view>
+    <input placeholder='请输入门店名称' type='text' confirm-type='search' bindconfirm="gossmd" ></input>
+  </view>
+
+</view>
+<view class='mdtopkb'></view>
+<view class='bbcon' wx:for="{{loupan}}" wx:key="*">
+  <view class='bbcon-l'>
+    <view class='bbcon-l-l'>
+      <image src='{{item.image}}'></image>
+    </view>
+    <view class='bbcon-l-r'>
+      <view class='bbcon-l-r-t'>{{item.name}}</view>
+      <view class='bbcon-l-r-b'>{{item.district}}</view>
+    </view>
+  </view>
+  <view class='bbcon-r bbcon-rcolor' catchtap='chooselp' id='{{item.id}}' data-name='{{item.name}}'>选择</view>
+</view>
+
+
+

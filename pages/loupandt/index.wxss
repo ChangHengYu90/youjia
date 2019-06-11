@@ -1,0 +1,90 @@
+page{
+  background-color: #fafafa
+}
+.zxdt{
+  width: 100%;
+  padding: 0 35rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx
+
+}
+.zxdt-t{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+}
+.zxdt-time{
+  width: 100%;
+  height: 45rpx;
+  line-height: 45rpx;
+  font-size: 30rpx;
+}
+.zxdt-js{
+  width: 100%;
+  font-size: 30rpx;
+  color: #333;
+  padding-bottom: 20rpx;
+}
+.zxdt-tp{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  padding-bottom: 20rpx;
+}
+.zxdt-tp image{
+  width: 222rpx;
+  height: 150rpx;
+  margin-bottom: 20rpx;
+}
+.zxdt-tp::after{
+  width: 222rpx;
+  content: '';
+}
+.loupan{
+  width: 100%;
+  height: 142rpx;
+  background-color: #f3f4f6;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loupan-l{
+  width: 160rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loupan-l image{
+  width: 112rpx;
+  height: 90rpx;
+  border-radius: 10rpx;
+}
+.loupan-r{
+  width: 510rpx;
+ 
+}
+.loupan-r-t{
+  height: 55rpx;
+  font-size: 34rpx;
+  color: #000;
+  font-weight: 600;
+}
+.loupan-r-b{
+  font-size: 28rpx;
+  color: #999;
+}
+.zwsj{
+  width: 100%;
+  height: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #999;
+}

@@ -1,0 +1,12 @@
+<view class='pic' catchtap='gozhucejjr'>
+  <image src='{{apis}}/image/54.png'></image>
+</view>
+<view class='wz'>
+  <view class='wzcon' catchtap='gozhucejjr'>独立经纪人</view>
+</view>
+<view class='pic' catchtap='gozhucejg'>
+  <image src='{{apis}}/image/55.png'></image>
+</view>
+<view class='wz'>
+  <view class='wzcon' catchtap='gozhucejg' >机构经纪人</view>
+</view>

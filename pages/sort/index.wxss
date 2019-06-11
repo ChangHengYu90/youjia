@@ -1,0 +1,154 @@
+page{
+  background-color: #fafafa
+}
+.sort{
+  width: 100%;
+  height: 280rpx;
+  
+  background-size: 100% 100%;
+  margin-bottom: 80rpx;
+
+}
+.sx{
+  width: 100%;
+  padding: 0 20rpx;
+  height: 70rpx;
+  box-sizing: border-box
+}
+.sx picker{
+  width: 100%;
+  height: 100%
+}
+.picker{
+  width: 710rpx;
+  height:70rpx;
+  display: flex;
+ 
+  justify-content: flex-end;
+  font-size: 30rpx;
+  align-items: center;
+  color: #fff
+}
+.picker image{
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 20rpx
+}
+.sorttype{
+  width: 690rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 260rpx;
+  left: 30rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  background-color: #fff;
+}
+.sorttype-l{
+   width: 344rpx;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.sorttype-z{
+   width: 2rpx;
+   height: 35rpx;
+   background-color: #eee;
+}
+.sorttype-xz{
+  padding: 0 10rpx;
+  height: 55rpx;
+  border-bottom: 3rpx solid #E25740;
+  font-size: 30rpx;
+  color: #E25740;
+}
+.sorttype-wxz{
+  padding: 0 10rpx;
+  height: 55rpx;
+  border-bottom: 3rpx solid #fff;
+  font-size: 30rpx;
+  color: #999;
+}
+scroll-view{
+ background-color: #fff
+}
+.sortlist{
+  width: 690rpx;
+  margin-left: 30rpx;
+}
+.list{
+  width: 100%;
+  /* height: 130rpx; */
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 0;
+}
+.list-r{
+  width: 120rpx;
+}
+.list-r-t{
+  width: 100%;
+  height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999
+}
+.list-r-b{
+  width: 100%;
+  height: 40rpx;
+  text-align: center;
+  font-size: 38rpx;
+  color: #E25740;
+  font-weight: 600;
+}
+.list-l{
+  width: 560rpx;
+  height: 130rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+.list-l-l{
+  width: 95rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #ffb73e
+}
+
+.list-l-l image{
+  width: 38rpx;
+  height: 50rpx;
+}
+.list-l-z{
+  width: 86rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.list-l-z image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+.list-l-r{
+  width: 460rpx;
+}
+.list-l-r-t{
+  padding-bottom: 10rpx;
+  font-size: 32rpx;
+}
+.list-l-r-b{
+  width: 100%;
+  font-size: 28rpx;
+  color: #999;
+}

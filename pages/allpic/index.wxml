@@ -1,0 +1,10 @@
+<view class='allpic'>
+<view class="{{index==xiabiao?'allpiccon allpicconxz':'allpiccon'}}" catchtap='choosetptype' wx:for="{{alllist}}" wx:key='*' wx:for-index='xiabiao' data-index ='{{xiabiao}}'>{{item.typeName}}({{item.imageCount}})</view>
+
+</view>
+
+<swiper style='height:{{windowHeight}}px'>
+    <swiper-item  wx:for="{{alllist[index].imageList}}" wx:key='*'>
+      <view class='pic'><image src="{{item}}" mode='aspectFit' /></view>
+    </swiper-item>
+</swiper>

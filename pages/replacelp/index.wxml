@@ -1,0 +1,38 @@
+<view class='top'>
+  <view class='topcon'>
+    <view class='topcon-l'>
+      <image src='{{uesr.headImg}}'></image>
+    </view>
+    <view class='topcon-r'>
+      <view class='topcon-rcon'>
+        <view class='topcon-rcon-t'>
+          {{uesr.name}}
+          <em> {{uesr.mobile}}</em>
+        </view>
+        <view class='topcon-rcon-b'>
+          <em>楼盘</em> {{uesr.housingResourcesName}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='choosets'>请选择更换楼盘</view>
+<view class='topkb'></view>
+<view class='list' wx:for="{{list}}" wx:key="*">
+  <view class='list-l'>{{item.name}}</view>
+  <view class='list-r' data-id="{{item.id}}" data-name="{{item.name}}" catchtap='choose'>选择</view>
+</view>
+
+<view class='tcc' wx:if="{{isshow==2}}">
+  <view class='tcccon'>
+    <view class='tcccon-t'>
+      确定将置业顾问
+      <span>{{uesr.name}} </span>更换至
+      <span>{{lpname}}</span>楼盘吗？
+    </view>
+    <view class='tcccon-b'>
+    <view class='tcccon-b-l' catchtap='qdgh'>确定</view>
+    <view class='tcccon-b-r' catchtap='qxgh'>取消</view>
+    </view>
+  </view>
+</view>

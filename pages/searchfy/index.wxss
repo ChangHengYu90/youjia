@@ -1,0 +1,94 @@
+page{
+  background-color: #fafafa
+}
+.mdtop{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ddd;
+  position: fixed;
+  top: 0rpx;
+}
+.mdtopkb{
+  width: 100%;
+  height: 198rpx;
+}
+.mdtop-l{
+  width: 590rpx;
+  height: 70rpx;
+  margin-left: 40rpx;
+  border-radius: 35rpx;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mdtop-l-l{
+  width: 80rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mdtop-l-l image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.mdtop-l input{
+  width: 500rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+}
+.mdtop-r{
+  height: 100%;
+  margin-left: 10rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+
+}
+.ssls{
+  width: 100%;
+  height: 96rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 102rpx;
+  background-color: #fff;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.ssls-l{
+ height: 100%;
+ font-size: 32rpx;
+ font-weight: 600;
+ color: #000;
+ display: flex;
+ align-items: center;
+}
+.ssls-r{
+ height: 100%;
+ font-size: 30rpx;
+ font-weight: 600;
+ color: #999;
+ display: flex;
+ align-items: center;
+}
+.ssls-r image{
+  width: 30rpx;
+  height: 35rpx;
+  margin-right: 10rpx;
+}
+.sscon{
+ width: 100%;
+ height: 100rpx;
+ padding: 0 40rpx;
+ box-sizing: border-box;
+ border-bottom: 1rpx solid #eee;
+ font-size: 28rpx;
+ line-height: 100rpx;
+}

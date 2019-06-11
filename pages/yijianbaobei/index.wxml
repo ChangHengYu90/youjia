@@ -1,0 +1,72 @@
+<view class='mdtop'>
+  <view class='mdtop-l'>
+    <view class='mdtop-l-l'>
+      <image src='{{apis}}/image/sousuo.png'></image>
+    </view>
+    <input placeholder='请输入楼盘名称' type='text' confirm-type='search' bindconfirm="gossmd" ></input>
+  </view>
+
+</view>
+<view class='mdtopkb'></view>
+<view class='bbcon' wx:for="{{loupan}}" wx:key="*" wx:for-index='index'>
+  <view class='bbcon-l'>
+    <view class='bbcon-l-l'>
+      <image src='{{item.image}}'></image>
+    </view>
+    <view class='bbcon-l-r'>
+      <view class='bbcon-l-r-t'>{{item.name}}</view>
+      <view class='bbcon-l-r-b'>{{item.district}}</view>
+    </view>
+  </view>
+  <view class='bbcon-r bbcon-rcolor' wx:if="{{item.istj==false}}" catchtap='gotianjia' data-index='{{index}}'>添加</view>
+  <view class='bbcon-r bbcon-rcolor2' wx:if="{{item.istj==true}}">已添加</view>
+</view>
+
+<view class='bottomkb'></view>
+<view class='bottom'>
+  <view class='bottom-l' catchtap='chooselp'>
+    已添加楼盘
+    <span>{{tjlist.length}}</span>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+  <view class='bottom-r' catchtap='gobaobei'>
+    <image src='{{apis}}/image/kechengbaoming.png'></image>
+    一键报备
+  </view>
+</view>
+<view class='tck' wx:if="{{lpisshow==1}}" bindtap='close'>
+  <view class='tckcon' catchtap='zz'>
+    <view class='tckcon-t'>
+      <view class='tckcon-t-l'>已添加楼盘</view>
+      <view class='tckcon-t-r' catchtap='qingkong'>
+        <image src='{{apis}}/image/33.png'></image>
+        清空
+      </view>
+    </view>
+    <view class='tckcon-b'>
+      <view class='tckcon-bcon' wx:for="{{tjlist}}" wx:key="*" wx:for-index='index'>
+        <view class='tckcon-bcon-l'>
+          <view class='tckcon-bcon-l-t'>
+            {{item.name}}
+          </view>
+          <view class='tckcon-bcon-l-b'>
+           {{item.district}}
+          </view>
+        </view>
+        <view class='tckcon-bcon-r' catchtap='godel' data-index='{{index}}' data-faterindex ='{{item.index}}'>
+          删除
+        </view>
+      </view>
+   
+    </view>
+  </view>
+</view>
+<!-- 提示 -->
+<view class='tstck' wx:if='{{istcc==1}}'>
+  <view class='tstckcon'>
+    <view class='tstckcon-t'>您选择的楼盘该客户均处于报备保护期，无法报备</view>
+    <view class='tstckcon-b'>
+      <view catchtap='cxchoose' >重新选择</view>
+    </view>
+  </view>
+</view>

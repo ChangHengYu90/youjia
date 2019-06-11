@@ -1,0 +1,12 @@
+
+
+<view class='zhangh'>
+  <input placeholder='请输入真实姓名' bindinput='hqname' maxlength='20' type='text' ></input>
+</view>
+<view class='zhangh'>
+  <input placeholder='请输入身份证号码' bindinput='hqnffzh' maxlength='20' type='idcard'></input>
+</view>
+
+<view class='submit'>
+<view catchtap='submit'>完成认证</view>
+</view>

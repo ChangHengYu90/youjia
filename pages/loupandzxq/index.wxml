@@ -1,0 +1,65 @@
+<map id="myMap" markers="{{markers}}" style="width:100%;height:{{height}}px;" longitude="{{longitude}}" latitude="{{latitude}}" scale='16'>
+</map>
+<view class='type'>
+  <view class='type-c' catchtap='choosetype' id='0' data-name='公交'>
+    <view class='type-c-t'>
+      <image src='{{apis}}/image/75.png' wx:if="{{stateid!=0}}"></image>
+       <image src='{{apis}}/image/81.png' wx:if="{{stateid==0}}"></image>
+    </view>
+    <view class='type-c-b'>
+      公交
+    </view>
+  </view>
+  <view class='type-c' catchtap='choosetype' id='1' data-name='地铁'>
+    <view class='type-c-t'>
+      <image src='{{apis}}/image/76.png' wx:if="{{stateid!=1}}"></image>
+      <image src='{{apis}}/image/82.png' wx:if="{{stateid==1}}"></image>
+    </view>
+    <view class='type-c-b'>
+      地铁
+    </view>
+  </view>
+  <view class='type-c' catchtap='choosetype' id='2' data-name='教育'>
+    <view class='type-c-t'>
+      <image src='{{apis}}/image/77.png' wx:if="{{stateid!=2}}"></image>
+      <image src='{{apis}}/image/83.png' wx:if="{{stateid==2}}"></image>
+    </view>
+    <view class='type-c-b'>
+      教育
+    </view>
+  </view>
+  <view class='type-c' catchtap='choosetype' id='3' data-name='医院'>
+    <view class='type-c-t'>
+      <image src='{{apis}}/image/78.png' wx:if="{{stateid!=3}}"></image>
+      <image src='{{apis}}/image/84.png' wx:if="{{stateid==3}}"></image>
+    </view>
+    <view class='type-c-b'>
+      医院
+    </view>
+  </view>
+  <view class='type-c' catchtap='choosetype' id='4' data-name='银行'>
+    <view class='type-c-t'>
+      <image src='{{apis}}/image/79.png' wx:if="{{stateid!=4}}"></image>
+      <image src='{{apis}}/image/85.png' wx:if="{{stateid==4}}"></image>
+    </view>
+    <view class='type-c-b'>
+      银行
+    </view>
+  </view>
+  <view class='type-c' catchtap='choosetype' id='5' data-name='美食'>
+    <view class='type-c-t'>
+      <image src='{{apis}}/image/80.png'  wx:if="{{stateid!=5}}"></image>
+      <image src='{{apis}}/image/86.png' wx:if="{{stateid==5}}"></image>
+    </view>
+    <view class='type-c-b'>
+      美食
+    </view>
+  </view>
+
+</view>
+<cover-view class='dw' catchtap='godaohang'>
+  <cover-view class='dw-t'>
+    <cover-image src='{{apis}}/image/56.png'></cover-image>
+  </cover-view>
+  <cover-view class='dw-b'>导航</cover-view>
+</cover-view>

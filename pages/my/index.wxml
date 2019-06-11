@@ -1,0 +1,58 @@
+<import src="../../template/index.wxml" />
+<block wx:if="{{usertype==1}}">
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<view class='content'>
+  <view class='mycon'>
+    <view class='mycon-l'>机构名称</view>
+    <view class='mycon-r'>{{userxx.name}}</view>
+  </view>
+  <view class='mycon'>
+    <view class='mycon-l'>手机号</view>
+    <view class='mycon-r'>{{userxx.mobile}}</view>
+  </view>
+  <view class='mycon' catchtap='goxgpwd'>
+    <view class='mycon-l'>修改密码</view>
+    <view class='mycon-r'>
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+  <view class='mycon' catchtap='gorenz' wx:if="{{isrz==0}}">
+    <view class='mycon-l'>公司认证</view>
+    <view class='mycon-r'>
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</view>
+</block>
+<view class='content' wx:if="{{usertype==2}}">
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+  <view class='mycon'>
+    <view class='mycon-l'>真实姓名</view>
+    <view class='mycon-r'>{{userxx.name}}</view>
+  </view>
+  <view class='mycon'>
+    <view class='mycon-l'>手机号</view>
+    <view class='mycon-r'>{{userxx.mobile}}</view>
+  </view>
+  <view class='mycon'>
+    <view class='mycon-l'>身份信息</view>
+    <view class='mycon-r'>项目经理</view>
+  </view>
+  <view class='mycon' catchtap='goxgpwd'>
+    <view class='mycon-l'>修改密码</view>
+    <view class='mycon-r'>
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</view>
+<view class='submit' catchtap='gotc'>
+  <view>退出登录</view>
+</view>
+<view class='tcc' wx:if="{{userid==''}}">
+  <view class='tcccon'>
+    <view class='tcccon-t'>您还未登录，请先登录</view>
+    <view class='tcccon-b'>
+      <view catchtap='gologin'>去登录</view>
+    </view>
+  </view>
+</view>

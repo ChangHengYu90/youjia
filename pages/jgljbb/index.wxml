@@ -1,0 +1,143 @@
+
+<view class='top'>
+  <view class='type'>
+    <view class='typecon' catchtap='goqhtype' id='0'>
+      <view class='typecontent'>
+        <view class="{{state==0?'typecon-xz':'typecon-wxz'}}">待确认（{{toplist.dataCount0}}）</view>
+      </view>
+    </view>
+    <view class='typecon' catchtap='goqhtype' id='1'>
+      <view class='typecontent'>
+        <view class="{{state==1?'typecon-xz':'typecon-wxz'}}">已报备（{{toplist.dataCount1}}）</view>
+      </view>
+    </view>
+    <view class='typecon' catchtap='goqhtype' id='2'>
+      <view class='typecontent'>
+        <view class="{{state==2?'typecon-xz':'typecon-wxz'}}">已到访（{{toplist.dataCount2}}）</view>
+      </view>
+    </view>
+    <view class='typecon' catchtap='goqhtype' id='3'>
+      <view class='typecontent'>
+        <view class="{{state==3?'typecon-xz':'typecon-wxz'}}">已认购（{{toplist.dataCount3}}）</view>
+      </view>
+    </view>
+    <view class='typecon' catchtap='goqhtype' id='4'>
+      <view class='typecontent'>
+        <view class="{{state==4?'typecon-xz':'typecon-wxz'}}">已成交（{{toplist.dataCount4}}）</view>
+      </view>
+    </view>
+    <view class='typecon' catchtap='goqhtype' id='5'>
+      <view class='typecontent'>
+        <view class="{{state==5?'typecon-xz':'typecon-wxz'}}">已结佣（{{toplist.dataCount5}}）</view>
+      </view>
+    </view>
+    <view class='typecon' catchtap='goqhtype' id='6'>
+      <view class='typecontent'>
+        <view class="{{state==6?'typecon-xz':'typecon-wxz'}}">已失效（{{toplist.dataCount6}}）</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='topss'>
+    <view class='topss-con'>
+      <view class='topss-con-l'>
+        <image src='{{apis}}/image/sousuo.png'></image>
+      </view>
+      <view class='topss-con-r'>
+        <input placeholder='搜索楼盘名称或客户姓名' type='text' confirm-type='search' bindconfirm='hqname'></input>
+      </view>
+    </view>
+  </view> -->
+</view>
+<view class='topkb'></view>
+<view class='content' wx:for="{{bblist}}" wx:key="*">
+  <view class='content-t'>
+    <view class='content-t-l'>
+      <span>经纪人：</span>{{item.brokerName}}</view>
+    <view class='content-t-r' catchtap='gobdphone' id='{{item.brokerMobile}}'>{{item.brokerMobile}}
+      <image src='{{apis}}/image/21.png'></image>
+    </view>
+  </view>
+  <view class='content-b'>
+    <view class='content-b-l'>
+      <view class='content-b-l-t'>{{item.name}}
+        <span>{{item.mobile}}</span>
+      </view>
+      <view class='content-b-l-b'>
+        <span>报备楼盘：</span>{{item.hourseName}}
+      </view>
+      <view class='content-b-l-b'>
+        <span>提交时间：</span>{{item.date}}
+      </view>
+      <view class='content-b-l-b'>
+        <span>预计看房：</span>{{item.visitTime}}
+      </view>
+    </view>
+    <view class='content-b-r' wx:if="{{state==0}}">
+      <!-- <view class='qrjj'>
+        <view class='qrjj-l'>确认</view>
+        <view class='qrjj-r'>拒绝</view>
+      </view> -->
+       <view class='khmsout'><view class='khms' catchtap='showkhms' data-content='{{item.description}}'>客户描述</view></view>
+    </view>
+    <view class='content-b-r' wx:if="{{state==1}}">
+      <view class='baobeits' wx:if="{{item.reportProtectionTime!=''}}">
+        保护期时间
+      </view>
+      <view class='baobeitime' wx:if="{{item.reportProtectionTime!=''}}">
+        <view>{{item.reportProtectionTime}}</view>
+      </view>
+       <view class='khmsout'><view class='khms' catchtap='showkhms' data-content='{{item.description}}'>客户描述</view></view>
+    </view>
+    <view class='content-b-r'  wx:if="{{state==2}}">
+      <view class='baobeits' wx:if="{{item.visitProtectionTime!=''}}">
+        保护期时间
+      </view>
+      <view class='baobeitime' wx:if="{{item.visitProtectionTime!=''}}">
+        <view>{{item.visitProtectionTime}}</view>
+      </view>
+       <view class='khmsout'><view class='khms' catchtap='showkhms' data-content='{{item.description}}'>客户描述</view></view>
+    </view>
+    <view class='content-b-r' wx:if="{{state==4}}">
+      <view class='baobeits'>
+        佣金
+      </view>
+      <view class='yongjin' wx:if="{{item.commission!=''}}">￥{{item.commission}}</view>
+       <view class='yongjin' wx:if="{{item.commission==''}}">￥0</view>
+      <view class='yicj'>
+        <view class='yicj1'>未结清</view>
+      </view>
+       <view class='khmsout'><view class='khms' catchtap='showkhms' data-content='{{item.description}}'>客户描述</view></view>
+    </view>
+    <view class='content-b-r'  wx:if="{{state==5}}">
+      <view class='baobeits'>
+        佣金
+      </view>
+      <view class='yongjin' wx:if="{{item.commission!=''}}">￥{{item.commission}}</view>
+       <view class='yongjin' wx:if="{{item.commission==''}}">￥0</view>
+      <view class='yicj'>
+        <view class='yicj2'>已结清</view> 
+      </view>
+       <view class='khmsout'><view class='khms' catchtap='showkhms' data-content='{{item.description}}'>客户描述</view></view>
+    </view>
+    <view class='content-b-r' wx:if="{{state==6}}">
+      <view class='qrjj'>
+        <view></view>
+        <!-- <view class='qrjj-r' catchtap='godel' id='{{item.id}}'>
+        <image src='{{apis}}/image/shanchu.png'></image>
+        </view> -->
+      </view>
+       <view class='khmsout'><view class='khms' catchtap='showkhms' data-content='{{item.description}}'>客户描述</view></view>
+    </view>
+  </view>
+</view>
+<view class='zwsj' wx:if="{{bblist.length==0}}">
+暂无数据
+</view>
+<view class='zz' catchtap='closekhms' wx:if="{{khmsid==1}}">
+   <view class='zzcon' catchtap='zzmp'>
+      <view class='zzcon-t'>客户描述</view>
+      <view class='zzcon-z'>
+      <textarea placeholder='暂无描述...' disabled='true' value='{{content}}'></textarea>
+      </view>
+   </view>
+</view>

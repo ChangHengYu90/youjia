@@ -1,0 +1,54 @@
+<view class='lpname'>
+  <view class='lpname-l'>楼盘名称</view>
+  <view class='lpname-r'>{{loupanname}}</view>
+</view>
+
+<view class='lpname'>
+  <view class='lpname-l'>预计到访时间</view>
+  <view class='lpname-r'>
+    <picker class='time-picker' mode="multiSelector" bindchange="bindStartMultiPickerChange" bindtap='pickerTap' bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      {{startDate}}
+      <image src='{{apis}}/image/10.png'></image>
+    </picker>
+
+  </view>
+</view>
+<view class='lpname'>
+  <view class='lpname-l'>客户姓名</view>
+  <view class='lpname-r2'>
+    <input placeholder='请输入' maxlength='10' bindinput='hqname' value='{{khname}}'></input>
+    <image src='{{apis}}/image/tongxunlu.png' catchtap='gotxlxz'></image>
+  </view>
+</view>
+<view class='lpname'>
+  <view class='lpname-l'>客户手机</view>
+  <view class='lpname-r'>
+    <input placeholder='请输入' type='number' value='{{khphone}}' maxlength='11' bindinput='khphone'></input>
+  </view>
+</view>
+<view class='lpname'>
+  <view class='lpname-l'>开启号码隐藏</view>
+  <view class='lpname-r'>
+    <switch class="tui-fr" checked="{{isChecked1}}" bindchange="changeSwitch1" />
+  </view>
+</view>
+<view class='ycz' wx:if="{{ishave==1}}">
+  <span>通讯录已存在：</span>{{txl.name}} {{txl.mobile}}</view>
+<view class='khms'>
+  <view class='khms-t'>客户描述</view>
+  <view class='khms-b'>
+    <textarea placeholder='填写客户基本情况...'  bindinput='hqkhms'></textarea>
+  </view>
+</view>
+<view class='bottomkb'></view>
+<view class='bottom'>
+  <view catchtap='submit'>
+    报备
+  </view>
+</view>
+<!-- <view class='bbsbout'>
+<view class='bbsbcon'>
+<view class='bbsbcon-t'>隐藏手机号码报备不成功,请选择全号报备</view>
+<view class='bbsbsubmit'>重新选择</view>
+</view>
+</view> -->

@@ -1,0 +1,77 @@
+<import src="../../template/index.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<view class='top' catchtap='gogrzl'>
+  <view class='top-l'>
+    <view class='top-l-l'>
+      <image src='{{grxx.headImg}}'></image>
+    </view>
+    <view class='top-l-r'>
+      <view class='top-l-r-c'>
+        <view class='top-l-r-c-t'>
+           {{grxx.mobile}}
+        </view>
+        <view class='top-l-r-c-b'>
+          {{grxx.typeName}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='top-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view class='type' catchtap='gomygz'>
+  <view class='type-l'>
+    <image src='{{apis}}/image/46.png'></image>
+    我的关注
+  </view>
+  <view class='type-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view class='type' catchtap='gomyxx'>
+  <view class='type-l'>
+    <image src='{{apis}}/image/47.png' wx:if="{{grxx.isUnreadMessage==0}}" ></image>
+    <image src='{{apis}}/image/47.png' wx:if="{{grxx.isUnreadMessage==1}}" ></image>
+    我的消息
+  </view>
+  <view class='type-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view class='type' catchtap='huanjigou'>
+  <view class='type-l'>
+    <image src='{{apis}}/image/48.png'></image>
+    加入/更换机构
+  </view>
+  <view class='type-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view class='type' catchtap='gorenzheng'  wx:if="{{grxx.authenticationState==0}}">
+  <view class='type-l'>
+    <image src='/image/renzheng.png'></image>
+    实名认证
+  </view>
+  <view class='type-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view class='type' catchtap='gosetup'>
+  <view class='type-l'>
+    <image src='{{apis}}/image/49.png'></image>
+    设置
+  </view>
+  <view class='type-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view class='dbkb'></view>
+<view class='tcc' wx:if="{{isshowid==0}}">
+  <view class='tcccon'>
+    <view class='tcccon-t'>您还未登录，请先登录</view>
+    <view class='tcccon-b'>
+      <view catchtap='gologin'>去登录</view>
+    </view>
+  </view>
+</view>

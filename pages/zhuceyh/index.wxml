@@ -1,0 +1,38 @@
+<view class='num'>
+  <view class='num-l'>
+    <input placeholder='请输入手机号' bindinput='hqphone' maxlength='11' type='number'></input>
+  </view>
+  <view class='num-r' catchtap='huoquyzm'  id="{{zcbtn}}">{{VerifyCode}}</view>
+</view>
+<view class='zhangh'>
+  <input placeholder='请输入验证码' bindinput='hqyzm' maxlength='20' type='number'></input>
+</view>
+<view class='zhangh'>
+  <input placeholder='请输入密码' bindinput='hqpwd' maxlength='20' type='password'></input>
+</view>
+<!-- 机构经纪人 -->
+<view class='zhangh' wx:if='{{typeid==2}}'>
+  <input placeholder='请输入6位数机构邀请码' bindinput='hqjgyqm' maxlength='6'></input>
+</view>
+<!-- 独立经纪人 -->
+<view class='zhangh'  wx:if='{{typeid==3}}'>
+  <input placeholder='请输入4位数推荐人邀请码'bindinput='hqjgyqm' maxlength='4'></input>
+</view>
+<view class='sfyz'>
+  身份验证（选填）
+</view>
+<view class='zhangh'>
+  <input placeholder='请输入真实姓名' bindinput='hqname' maxlength='20' type='text' ></input>
+</view>
+<view class='zhangh'>
+  <input placeholder='请输入身份证号码' bindinput='hqnffzh' maxlength='20' type='idcard'></input>
+</view>
+
+<view class='sfyz2'>
+  <image src='{{apis}}/image/53.png'></image>
+  注册即同意
+  <span catchtap='lookxy'>《有家经纪人用户协议》</span>
+</view>
+<view class='submit'>
+<view catchtap='submit'>用户注册</view>
+</view>

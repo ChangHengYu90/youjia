@@ -1,0 +1,237 @@
+<view class='top'>
+  <view class='topcon' catchtap='choosetype' id='1'>
+    <view class="{{dktype==1?'topcon-c2':'topcon-c'}}">公积金贷款</view>
+  </view>
+  <view class='topcon' catchtap='choosetype' id='2'>
+    <view class="{{dktype==2?'topcon-c2':'topcon-c'}}">商业贷款</view>
+  </view>
+  <view class='topcon' catchtap='choosetype' id='3'>
+    <view class="{{dktype==3?'topcon-c2':'topcon-c'}}">组合贷款</view>
+  </view>
+</view>
+<view class='topkb'></view>
+<block wx:if="{{dktype==1}}">
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='content'>
+  <view class="picker">
+    <view class="picker-l">
+      计算方式
+    </view>
+    <view class="picker-r">
+      {{array[index]}}
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</picker>
+<view class='txcon' wx:if="{{index==0}}">
+  <view class="picker-l">
+    房价总额
+  </view>
+  <view class="picker-r">
+    <input placeholder='请输入房价总额' type='digit' bindinput='hqfjze'></input>
+    万
+  </view>
+</view>
+<picker bindchange="bindPickerChange2" value="{{index}}" range="{{array2}}" class='content' wx:if="{{index==0}}">
+  <view class="picker">
+    <view class="picker-l">
+      贷款比例
+    </view>
+    <view class="picker-r">
+       {{array2[index2]}}
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</picker>
+<view class='txcon' wx:if="{{index==1}}">
+  <view class="picker-l">
+    贷款总额
+  </view>
+  <view class="picker-r">
+    <input placeholder='请输入贷款总额' type='digit' bindinput='hqdkze'></input>
+    万
+  </view>
+</view>
+<picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}"  class='content'>
+  <view class="picker">
+    <view class="picker-l">
+      贷款年限
+    </view>
+    <view class="picker-r">
+      {{array3[index3]}}
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</picker>
+<picker bindchange="bindPickerChange4" value="{{index}}" range="{{array4}}" class='content'>
+  <view class="picker">
+    <view class="picker-l">
+      贷款利率
+    </view>
+    <view class="picker-r">
+      {{array4[index4]}}
+    </view>
+  </view>
+</picker>
+</block>
+<block wx:if="{{dktype==2}}">
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='content'>
+  <view class="picker">
+    <view class="picker-l">
+      计算方式
+    </view>
+    <view class="picker-r">
+      {{array[index]}}
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</picker>
+<view class='txcon' wx:if="{{index==0}}">
+  <view class="picker-l">
+    房价总额
+  </view>
+  <view class="picker-r">
+    <input placeholder='请输入房价总额' type='digit' bindinput='hqfjze'></input>
+    万
+  </view>
+</view>
+<picker bindchange="bindPickerChange2" value="{{index}}" range="{{array2}}" class='content' wx:if="{{index==0}}">
+  <view class="picker">
+    <view class="picker-l">
+      贷款比例
+    </view>
+    <view class="picker-r">
+       {{array2[index2]}}
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</picker>
+<view class='txcon' wx:if="{{index==1}}">
+  <view class="picker-l">
+    贷款总额
+  </view>
+  <view class="picker-r">
+    <input placeholder='请输入贷款总额' type='digit' bindinput='hqdkze'></input>
+    万
+  </view>
+</view>
+<picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}"  class='content'>
+  <view class="picker">
+    <view class="picker-l">
+      贷款年限
+    </view>
+    <view class="picker-r">
+      {{array3[index3]}}
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</picker>
+<picker bindchange="bindPickerChange5" value="{{index5}}" range="{{array5}}" class='content'>
+  <view class="picker">
+    <view class="picker-l">
+      贷款利率
+    </view>
+    <view class="picker-r">
+      {{array5[index5]}}
+    </view>
+  </view>
+</picker>
+</block>
+<block wx:if="{{dktype==3}}">
+<!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='content'>
+  <view class="picker">
+    <view class="picker-l">
+      计算方式
+    </view>
+    <view class="picker-r">
+      {{array[index]}}
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</picker> -->
+<!-- <view class='txcon' wx:if="{{index==0}}">
+  <view class="picker-l">
+    房价总额
+  </view>
+  <view class="picker-r">
+    <input></input>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view> -->
+<!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='content' wx:if="{{index==0}}">
+  <view class="picker">
+    <view class="picker-l">
+      贷款比例
+    </view>
+    <view class="picker-r">
+      计算方式
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</picker> -->
+<!-- <view class='txcon'>
+  <view class="picker-l">
+    贷款总额
+  </view>
+  <view class="picker-r">
+    <input></input>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view> -->
+<!-- 组合贷款 -->
+<view class='txcon'>
+  <view class="picker-l">
+    公积金贷款
+  </view>
+  <view class="picker-r">
+    <input placeholder='请输入公积金贷款额度' type='digit' bindinput='hqgjj'></input>
+    万
+  </view>
+</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='content'>
+  <view class="picker">
+    <view class="picker-l">
+      公积金利率
+    </view>
+    <view class="picker-r">
+      {{array4[index4]}}
+
+    </view>
+  </view>
+</picker>
+<view class='txcon'>
+  <view class="picker-l">
+    商业贷款
+  </view>
+  <view class="picker-r">
+     <input placeholder='请输入商业贷款额度' type='digit' bindinput='hqsy'></input>
+    万
+  </view>
+</view>
+<picker bindchange="bindPickerChange5" value="{{index5}}" range="{{array5}}" class='content'>
+  <view class="picker">
+    <view class="picker-l">
+      商贷利率
+    </view>
+    <view class="picker-r">
+      {{array5[index5]}}
+      
+    </view>
+  </view>
+</picker>
+<!-- 组合贷款结束 -->
+<picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}"  class='content'>
+  <view class="picker">
+    <view class="picker-l">
+      贷款年限
+    </view>
+    <view class="picker-r">
+      {{array3[index3]}}
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</picker>
+</block>
+<view class='bottomkb'></view>
+<view class='bottom'>
+  <view catchtap='gojs'>开始计算</view>
+</view>

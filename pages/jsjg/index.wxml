@@ -1,0 +1,111 @@
+<view class='top'>
+  <view class='topcon' catchtap='choosetype' id='1'>
+    <view class="{{dktype==1?'topcon-c2':'topcon-c'}}">等额本息</view>
+  </view>
+  <view class='topcon' catchtap='choosetype' id='2'>
+    <view class="{{dktype==2?'topcon-c2':'topcon-c'}}">等额本金</view>
+  </view>
+
+</view>
+<view class='topkb'></view>
+<block wx:if="{{dktype==1}}">
+<view class='txcon'>
+  <view class="picker-l">
+    贷款总额
+  </view>
+  <view class="picker-r">
+    {{shuju.zongje}}
+    <span>万</span>
+  </view>
+</view>
+<view class='txcon'>
+  <view class="picker-l">
+    还款总额
+  </view>
+  <view class="picker-r">
+    {{shuju.debx.hkze}}
+    
+  </view>
+</view>
+<view class='txcon'>
+  <view class="picker-l">
+    支付利息
+  </view>
+  <view class="picker-r">
+    {{shuju.debx.lx}}
+  </view>
+</view>
+<view class='txcon'>
+  <view class="picker-l">
+    贷款月数
+  </view>
+  <view class="picker-r">
+    {{shuju.zongys}}
+    <span>月</span>
+  </view>
+</view>
+<view class='txcon'>
+  <view class="picker-l">
+    月均还款
+  </view>
+  <view class="picker-r">
+    {{shuju.debx.yhk}}
+    <span>元</span>
+  </view>
+</view>
+</block>
+<block wx:if="{{dktype==2}}">
+<view class='txcon'>
+  <view class="picker-l">
+    贷款总额
+  </view>
+  <view class="picker-r">
+    {{shuju.zongje}}
+    <span>万</span>
+  </view>
+</view>
+<view class='txcon'>
+  <view class="picker-l">
+    还款总额
+  </view>
+  <view class="picker-r">
+    {{shuju.debj.hkze}}
+    
+  </view>
+</view>
+<view class='txcon'>
+  <view class="picker-l">
+    支付利息
+  </view>
+  <view class="picker-r">
+    {{shuju.debj.lx}}
+  </view>
+</view>
+<view class='txcon'>
+  <view class="picker-l">
+    贷款月数
+  </view>
+  <view class="picker-r">
+    {{shuju.zongys}}
+    <span>月</span>
+  </view>
+</view>
+<view class='txcon'>
+  <view class="picker-l">
+    月均还款
+  </view>
+  <view class="picker-r">
+    {{shuju.debj.yhk}}
+    <span>元</span>
+  </view>
+</view>
+<view class='txcon'>
+  <view class="picker-l">
+    逐月递减金额
+  </view>
+  <view class="picker-r">
+    {{shuju.debj.yjs}}
+    <span>元</span>
+  </view>
+</view>
+</block>

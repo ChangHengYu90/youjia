@@ -1,0 +1,14 @@
+<view class='content'>
+  <view class='content-t'>
+   案场确客规则：
+  </view>
+  <!-- <view class='content-b'>{{gz}}</view> -->
+  <rich-text nodes='{{gz}}'></rich-text>
+</view>
+<view class='bottomkb'  wx:if="{{type!=1}}"></view>
+<view class='bottom' wx:if="{{type!=1}}">
+<view catchtap='bdphone'>
+<image src='{{apis}}/image/36.png'></image>
+项目经理
+</view>
+</view>

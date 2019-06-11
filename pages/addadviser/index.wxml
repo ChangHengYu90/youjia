@@ -1,0 +1,33 @@
+<view class='top'>
+  <view class='top-t'>
+    <view class='top-t-t'>
+      <view class='top-t-t-l'>楼盘名称</view>
+      <view class='top-t-t-r'>
+        <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+            <image src='/image/32.png'></image>
+          </view>
+        </picker> -->
+        {{lpname}}
+      </view>
+    </view>
+     <view class='top-t-t'>
+      <view class='top-t-t-l'>顾问姓名</view>
+      <view class='top-t-t-r'>
+        <input placeholder='请输入' maxlength='11' type='text' bindinput='hqname'></input>
+      </view>
+     </view>
+     <view class='top-t-t'>
+      <view class='top-t-t-l'>顾问手机/账号</view>
+      <view class='top-t-t-r'>
+       <input placeholder='请输入' maxlength='11' type='number' bindinput='hqphone'></input>
+      </view>
+     </view>
+  </view>
+ 
+</view>
+<view class='bottomkb'></view>
+<view class='bottom'>
+<view class='bottomcon' catchtap='submit'>添加</view>
+</view>

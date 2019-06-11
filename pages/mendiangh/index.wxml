@@ -1,0 +1,40 @@
+<view class='mdgh'>
+  <view class='mdghcon'>
+    <view class='mdghcon-l'>
+      <image src='{{headimg}}'> </image>
+    </view>
+    <view class='mdghcon-r'>
+      <view class='mdghcon-r-t'>
+        <view class='mdghcon-r-t-l'>
+          {{name}}
+        </view>
+        <view class='mdghcon-r-t-r'>
+          {{phone}}
+        </view>
+      </view>
+      <view class='mdghcon-r-b'>
+        <span>门店：</span>{{mdname}}
+      </view>
+    </view>
+  </view>
+</view>
+<view class='ghts'>请选择更换门店</view>
+
+<view class='mdlist' wx:for="{{mdlist}}" wx:key="*"  wx:if="{{item.name!=mdname}}">
+  <view class='mdlist-l'>{{item.name}}</view>
+  <view class='mdlist-r' id='{{item.id}}' data-name='{{item.name}}' catchtap='gochoose'>选择</view>
+</view>
+
+<view class='tcc' wx:if="{{isshow==1}}">
+  <view class='tcccon'>
+    <view class='tcccon-t'>
+      确定将员工
+      <span>{{name}}</span>更换至
+      <span>{{ghname}}</span>吗？
+    </view>
+    <view class='tcccon-b'>
+    <view class='tcccon-b-l' catchtap='qdgh'>确定</view>
+    <view class='tcccon-b-r' catchtap='qxgh'>取消</view>
+    </view>
+  </view>
+</view>

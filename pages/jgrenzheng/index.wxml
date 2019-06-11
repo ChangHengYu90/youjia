@@ -1,0 +1,58 @@
+<view class='top'>
+  <view class='topcon'>
+    <view class='topcon-c' wx:if="{{isshow==1}}" catchtap='scpic'>
+      <view class='topcon-c-t'>
+        <image src='{{apis}}/image/65.png'></image>
+      </view>
+      <view class='topcon-c-b'>点击添加营业执照照片</view>
+    </view>
+    <view class='topcon-c2' wx:if="{{isshow==2}}">
+     <image src='{{image}}'></image>
+    </view>
+  </view>
+</view>
+<block wx:if="{{isshow==2}}">
+<view class='title' >机构信息</view>
+<view class='titlecon'>
+  <view class='titlecon-l'>
+    机构名称
+  </view>
+  <view class='titlecon-r2'>
+    {{shuju.name}}
+  </view>
+</view>
+<view class='titlecon'>
+  <view class='titlecon-l'>
+    信用代码
+  </view>
+  <view class='titlecon-r2'>
+     {{shuju.regNum}}
+  </view>
+</view>
+<view class='titlecon'>
+  <view class='titlecon-l'>
+    成立日期
+  </view>
+  <view class='titlecon-r2'>
+    {{shuju.establishDate}}
+  </view>
+</view>
+<view class='titlecon'>
+  <view class='titlecon-l'>
+    法人代表
+  </view>
+  <view class='titlecon-r2'>
+    {{shuju.person}}
+  </view>
+</view>
+<view class='titlecon'>
+  <view class='titlecon-l'>
+    注册地址
+  </view>
+  <view class='titlecon-r'>
+    {{shuju.address}}
+  </view>
+</view>
+<view class='wcrzkb'></view>
+<view class='wcrz' catchtap='gomy'>完成认证</view>
+</block>

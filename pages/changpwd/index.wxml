@@ -1,0 +1,23 @@
+<view class='pwd'>
+  <view class='pwdcon'>
+    <view class='pwdcon-l'>原密码</view>
+    <view class='pwdcon-r'>
+      <input placeholder='请输入原密码' type='password' bindinput='yuanpwd' maxlength='20'></input>
+    </view>
+  </view>
+  <view class='pwdcon'>
+    <view class='pwdcon-l'>新密码</view>
+    <view class='pwdcon-r'>
+      <input placeholder='请输入新密码' type='password' bindinput='newpwd' maxlength='20'></input>
+    </view>
+  </view>
+  <view class='pwdcon2'>
+    <view class='pwdcon-l'>确认密码</view>
+    <view class='pwdcon-r'>
+      <input placeholder='请输入确认密码' type='password' bindinput='querpwd' maxlength='20'></input>
+    </view>
+  </view>
+</view>
+<view class='submit'>
+<view catchtap='submit'>确认修改</view>
+</view>

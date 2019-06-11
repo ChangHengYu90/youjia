@@ -1,0 +1,21 @@
+<view class='ygout' wx:for="{{list}}" wx:key="*" wx:for-index="index" data-index="{{index}}" catchtap='choosexz' id='{{item.id}}'>
+  <view class='ygout-l'>
+    <view class='ygout-l-l'>
+     <image src='{{item.headImg}}'></image>
+    </view>
+    <view class='ygout-l-r'>
+      <view class='ygout-l-rcon'>
+        <view class='ygout-l-rcon-t'>{{item.name}}</view>
+        <view class='ygout-l-rcon-b'>{{item.mobile}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='ygout-r'>
+    <image src='{{apis}}/image/71.png' wx:if="{{item.isxz==true}}"></image>
+     <image src='{{apis}}/image/72.png' wx:if="{{item.isxz==false}}"></image>
+  </view>
+</view>
+<view class='bottomkb'></view>
+<view class='bottom'>
+<view class='bottomcon' catchtap='goadd'>确认添加</view>
+</view>

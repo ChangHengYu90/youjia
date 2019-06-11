@@ -1,0 +1,10 @@
+<view class='top'>
+<image src='{{apis}}/image/37.png'></image>
+</view>
+<!-- <view class='toptsc'>您已成功报备客户</view> -->
+<view class='toptsc'  wx:if="{{name!=''}}">您已成功报备客户到<text class="tcys">{{num}}</text>个楼盘 <span class="tcys">{{name}}</span>因该 客户处于报备保护期未报备。</view>
+<view class='toptsc' wx:if="{{name==''}}">您已成功报备客户到<text class="tcys">{{num}}</text>个楼盘 <span class="tcys">{{name}}</span></view>
+<view class='aj'>
+<view class='aj-t' catchtap='goshouye'>返回首页</view>
+<view class='aj-b' catchtap='gockjl'>查看进程</view>
+</view>

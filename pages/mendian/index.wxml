@@ -1,0 +1,50 @@
+<import src="../../template/index.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<view class='mdtop'>
+  <view class='mdtop-l'>
+    <view class='mdtop-l-l'>
+      <image src='{{apis}}/image/sousuo.png'></image>
+    </view>
+    <input placeholder='请输入门店名称' type='text' confirm-type='search' bindconfirm='gosearch'></input>
+  </view>
+  <view class='mdtop-r' catchtap='goaddmd'>添加</view>
+</view>
+<view class='mdtopkb'></view>
+<view class='mdcon' wx:for="{{mdlist}}" wx:key="*" wx:for-index="index">
+  <view class='mdcon-t'>
+    <view class='mdcon-t-l'> 
+      <view class='mdcon-t-l-t'>
+        {{item.name}}
+      </view>
+      <view class='mdcon-t-l-b' catchtap='goshow' data-index='{{index}}'>
+        门店员工
+        <span>{{item.brokerCount}}人</span>
+        <image src='{{apis}}/image/10.png'></image>
+      </view>
+    </view>
+    <view class='mdcon-t-r' catchtap='gobj' id='{{item.id}}' data-name='{{item.name}}'>
+      <image src='{{apis}}/image/bianji-copy.png'></image>
+    </view>
+  </view>
+  <view class='mdcon-yg' wx:for="{{item.brokerList}}" wx:key="*" catchtap='golookxq' id='{{child.id}}' wx:for-item="child" wx:if="{{item.isshow==true}}">
+    <view class='mdcon-yg-l'>
+      <image src='{{child.headImg}}'></image>
+      <view class='mdcon-yg-l-r'>
+        <view class='mdcon-yg-l-r-t'>{{child.name}}</view>
+        <view class='mdcon-yg-l-r-b'>{{child.mobile}}</view>
+      </view>
+    </view>
+    <view class='mdcon-yg-r'>
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='zwxx' wx:if="{{mdlist.length==0}}">
+  <view>
+    <image src='{{apis}}/image/12.png'></image>
+    <view class='ts'>暂无门店，点击右上角添加</view>
+  </view>
+
+</view>
+<view class='dbkb'></view>

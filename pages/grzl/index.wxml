@@ -1,0 +1,31 @@
+<view class='pic' catchtap='gobjtx'>
+  <view class='pic-l'>编辑头像</view>
+  <view class='pic-r'>
+    <image src='{{headImg}}'></image>
+  </view>
+</view>
+<view class='name'>
+  <view class='pic-l'>真实姓名</view>
+  <view class='name-r'>{{grxx.name}}</view>
+</view>
+<view class='name'>
+  <view class='pic-l'>手机号</view>
+  <view class='name-r'>{{grxx.mobile}}</view>
+</view>
+<!-- <view class='name'>
+  <view class='pic-l'>性别</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='xb'>
+    <view class="picker">
+     {{array[index]}}
+      <image src='{{apis}}/image/10.png'></image>
+    </view>
+  </picker>
+</view> -->
+<view class='name'>
+  <view class='pic-l'>性别</view>
+  <view class='name-r'>{{grxx.sex}}</view>
+</view>
+<view class='name' wx:if="{{grxx.institutionName!=''}}">
+  <view class='pic-l'>所属机构</view>
+  <view class='name-r'>{{grxx.institutionName}}</view>
+</view>

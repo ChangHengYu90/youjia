@@ -1,0 +1,105 @@
+page{
+  background-color: #fafafa
+}
+.top{
+  width: 100%;
+  height: 380rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topcon{
+  width: 500rpx;
+  height: 300rpx;
+  border-radius: 20rpx;
+  border:1rpx solid #eee;
+  background-color: #fff;
+  display: flex;
+  align-items: center
+}
+.topcon-c{
+  width: 100%
+}
+.topcon-c2{
+  width: 100%;
+  height: 100%;
+}
+.topcon-c2 image{
+  width: 100%;
+  height: 100%;
+}
+.topcon-c-t{
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topcon-c-t image{
+  width: 220rpx;
+  height: 130rpx;
+
+}
+.topcon-c-b{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.title{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #f85634;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.titlecon{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 30rpx;
+  padding: 30rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee
+}
+.titlecon-l{
+  width: 190rpx;
+  color: #999;
+}
+.titlecon-r{
+  width: 190rpx;
+
+}
+.titlecon-r{
+  width: 490rpx;
+  line-height: 1.4;
+}
+.titlecon-r2{
+ width: 490rpx;
+ text-align: right；
+
+}
+.wcrzkb{
+  width: 100%;
+  height: 100rpx;
+}
+.wcrz{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30rpx;
+   background: -webkit-linear-gradient(left, #fe7139 , #f64734); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right,#fe7139 , #f64734); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #fe7139 , #f64734); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #fe7139 , #f64734); /* 标准的语法 */
+}

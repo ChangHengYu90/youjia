@@ -1,0 +1,40 @@
+<view class='mdbj-md'>
+  <view class='mdbj-md-l'>门店名称</view>
+  <view class='mdbj-md-r'>
+  <input placeholder='{{name}}' type='text' confirm-type='done' bindconfirm='xgname'></input>
+  </view>
+</view>
+<view class='mdyg'>
+  <view class='mdyg-l'>门店员工
+    <span>{{mdlist.dataCount}}人</span>
+  </view>
+  <view class='mdyg-r' catchtap='goygadd'>添加</view>
+</view>
+<view class='ygcon' wx:for="{{mdlist.data}}" wx:key="*">
+  <view class='ygcon-l'>
+    <image src='{{item.headImg}}'></image>
+    <view class='ygcon-lcon'>
+      <view class='ygcon-lcon-t'>{{item.name}}</view>
+      <view class='ygcon-lcon-b'>{{item.mobile}}</view>
+    </view>
+  </view>
+  <view class='ygcon-r'>
+    <view class='ygcon-rcon' catchtap='gomdgh' id='{{item.id}}' data-headImg='{{item.headImg}}' data-name='{{item.name}}' data-phone='{{item.mobile}}' >
+      <view class='ygcon-rcon-t'>
+        <image src='{{apis}}/image/zhuanhuan.png'></image>
+      </view>
+      <view class='ygcon-rcon-b'>
+        换店
+      </view>
+    </view>
+    <view class='ygcon-rcon' catchtap='godel' id='{{item.id}}'>
+      <view class='ygcon-rcon-t'>
+        <image src='{{apis}}/image/close.png'></image>
+      </view>
+      <view class='ygcon-rcon-b'>
+        删除
+      </view>
+    </view>
+  </view>
+</view>
+

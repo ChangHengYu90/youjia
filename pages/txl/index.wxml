@@ -1,0 +1,43 @@
+<view class='mdtop'>
+  <view class='mdtop-l'>
+    <view class='mdtop-l-l'>
+      <image src='{{apis}}/image/sousuo.png'></image>
+    </view>
+    <input placeholder='请输入客户姓名，手机号' type='text' confirm-type='search' bindconfirm='gosearch' ></input>
+  </view>
+  <view class='mdtop-r' catchtap='gotjtxl'>添加</view>
+</view>
+<view class='mdtopkb'></view>
+<view class="container">
+
+  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
+
+    <view class="content">
+      <view class="content-l">
+        <view class="content-l-t">{{item.name}}</view>
+        <view class="content-l-b" catchtap='gobdphone' id='{{item.mobile}}'>{{item.mobile}}
+        <image src='{{apis}}/image/21.png'></image>
+        </view>
+      </view>
+      <view class="content-r" catchtap='gogenjin' id='{{item.id}}' data-name='{{item.name}}' data-phone='{{item.mobile}}' >跟进记录
+        <span>{{item.followCount}}</span>
+        <image src='{{apis}}/image/10.png'></image>
+      </view>
+    </view>
+    <view class="delout">
+    <view class="del" catchtap="del" data-index="{{index}}" id='{{item.id}}'>删除</view>
+    <view class="del2" catchtap="bianji" data-index="{{index}}" id='{{item.id}}' data-name='{{item.name}}' data-phone='{{item.mobile}}'>编辑</view>
+    </view>
+    
+    
+
+  </view>
+
+</view>
+<view class='zwxx' wx:if="{{items.length==0}}">
+  <view>
+    <image src='{{apis}}/image/12.png'></image>
+    <view class='ts'>暂无客户，点击右上角添加</view>
+  </view>
+
+</view>

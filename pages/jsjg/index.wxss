@@ -1,0 +1,64 @@
+page{
+  background-color: #fafafa
+}
+.top{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+}
+.topcon{
+  width: 375rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topcon-c{
+  height: 84rpx;
+   border-top: 2rpx solid #fff;
+  border-bottom: 2rpx solid #fff;
+  font-size: 30rpx;
+  line-height: 86rpx;
+}
+.topcon-c2{
+  height: 84rpx;
+   border-top: 2rpx solid #fff;
+  border-bottom: 2rpx solid #f75134;
+  font-size: 30rpx;
+  line-height: 86rpx;
+  color: #f75134;
+}
+.topkb{
+  width: 100%;
+  height: 100rpx;
+}
+.txcon{
+ width: 100%;
+  height: 96rpx;
+  border-bottom: 1rpx solid #eee;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.picker-l{
+  font-size: 30rpx;
+  color: #999
+}
+.picker-r{
+ height: 100%;
+ display: flex;
+ align-items: center;
+ font-size: 30rpx;
+ line-height: 96rpx;
+}
+.picker-r span{
+  color: #999;
+  margin-left: 10rpx;
+}

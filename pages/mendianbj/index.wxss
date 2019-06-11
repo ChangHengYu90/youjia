@@ -1,0 +1,115 @@
+/* pages/mendianbj/index.wxss */
+page{
+  background-color: #fafafa;
+}
+.mdbj-md{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  background-color: #fff;
+  margin: 20rpx 0;
+}
+.mdbj-md-l{
+ color: #999;
+}
+.mdyg{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  background-color: #fff;
+ 
+}
+.mdyg span{
+  color: #f3452f;
+}
+.mdyg-r{
+  width: 100rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  background-color: #f3452f;
+  color: #fff;
+}
+.ygcon{
+  width: 100%;
+  height: 135rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   padding: 0 35rpx;
+  box-sizing: border-box;
+  border-top: 1rpx solid #eee;
+  background-color: #fff;
+}
+.ygcon-l{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ygcon-l image{
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+}
+.ygcon-lcon-t{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+.ygcon-lcon-b{
+   font-size: 30rpx;
+   color: #999;
+}
+.ygcon-r{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ygcon-rcon{
+  margin-left: 30rpx;
+ 
+}
+.ygcon-rcon-t{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ygcon-rcon-t image{
+  width: 45rpx;
+  height: 45rpx;
+  
+}
+.ygcon-rcon-b{
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+}
+.mdbj-md-r{
+  width: 400rpx;
+  height: 100rpx;
+}
+.mdbj-md-r input{
+  width: 400rpx;
+  height: 100rpx;
+  text-align: right;
+}

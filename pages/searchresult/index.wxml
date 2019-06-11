@@ -1,0 +1,186 @@
+<view class='mdtop'>
+  <view class='mdtop-l'>
+    <view class='mdtop-l-l'>
+      <image src='{{apis}}/image/sousuo.png'></image>
+    </view>
+    <input placeholder='请输入门店名称'></input>
+  </view>
+  <view class='mdtop-r'>取消</view>
+</view>
+<view class='ssls'>
+<view class='ssls-l'>搜索结果</view>
+<view class='ssls-r'>
+
+ 共 <span>54</span> 条
+</view>
+</view>
+<view class='mdtopkb'></view>
+<view class='zwxx'>
+  <view>
+    <image src='{{apis}}/image/12.png'></image>
+    <view class='ts'>暂无搜索结果</view>
+  </view>
+ 
+</view>
+<view class='fangyuanxx'>
+  <view class='fangyuanxx-l'>
+    <image src='{{apis}}/image/17.png'></image>
+  </view>
+  <view class='fangyuanxx-r'>
+    <view class='fangyuanxx-r-name'>美的公园</view>
+    <view class='fangyuanxx-r-yj'>
+      <view class='fangyuanxx-r-yj-l'>佣金：登陆后可见</view>
+      <view class='fangyuanxx-r-yj-r'>9000
+        <span>元/m²</span>
+      </view>
+    </view>
+    <view class='fangyuanxx-r-dz'>徐州市-鼓楼区-下淀路</view>
+    <view class='fangyuanxx-r-bq'>
+      <view class='fangyuanxx-r-bqcon1'>
+        在售
+      </view>
+      <view class='fangyuanxx-r-bqcon'>
+        在售
+      </view>
+    </view>
+  </view>
+</view>
+<view class='fangyuanxx'>
+  <view class='fangyuanxx-l'>
+    <image src='{{apis}}/image/17.png'></image>
+  </view>
+  <view class='fangyuanxx-r'>
+    <view class='fangyuanxx-r-name'>美的公园</view>
+    <view class='fangyuanxx-r-yj'>
+      <view class='fangyuanxx-r-yj-l'>佣金：登陆后可见</view>
+      <view class='fangyuanxx-r-yj-r'>9000
+        <span>元/m²</span>
+      </view>
+    </view>
+    <view class='fangyuanxx-r-dz'>徐州市-鼓楼区-下淀路</view>
+    <view class='fangyuanxx-r-bq'>
+      <view class='fangyuanxx-r-bqcon1'>
+        在售
+      </view>
+      <view class='fangyuanxx-r-bqcon'>
+        在售
+      </view>
+    </view>
+  </view>
+</view>
+<view class='fangyuanxx'>
+  <view class='fangyuanxx-l'>
+    <image src='{{apis}}/image/17.png'></image>
+  </view>
+  <view class='fangyuanxx-r'>
+    <view class='fangyuanxx-r-name'>美的公园</view>
+    <view class='fangyuanxx-r-yj'>
+      <view class='fangyuanxx-r-yj-l'>佣金：登陆后可见</view>
+      <view class='fangyuanxx-r-yj-r'>9000
+        <span>元/m²</span>
+      </view>
+    </view>
+    <view class='fangyuanxx-r-dz'>徐州市-鼓楼区-下淀路</view>
+    <view class='fangyuanxx-r-bq'>
+      <view class='fangyuanxx-r-bqcon1'>
+        在售
+      </view>
+      <view class='fangyuanxx-r-bqcon'>
+        在售
+      </view>
+    </view>
+  </view>
+</view>
+<view class='fangyuanxx'>
+  <view class='fangyuanxx-l'>
+    <image src='{{apis}}/image/17.png'></image>
+  </view>
+  <view class='fangyuanxx-r'>
+    <view class='fangyuanxx-r-name'>美的公园</view>
+    <view class='fangyuanxx-r-yj'>
+      <view class='fangyuanxx-r-yj-l'>佣金：登陆后可见</view>
+      <view class='fangyuanxx-r-yj-r'>9000
+        <span>元/m²</span>
+      </view>
+    </view>
+    <view class='fangyuanxx-r-dz'>徐州市-鼓楼区-下淀路</view>
+    <view class='fangyuanxx-r-bq'>
+      <view class='fangyuanxx-r-bqcon1'>
+        在售
+      </view>
+      <view class='fangyuanxx-r-bqcon'>
+        在售
+      </view>
+    </view>
+  </view>
+</view>
+<view class='fangyuanxx'>
+  <view class='fangyuanxx-l'>
+    <image src='{{apis}}/image/17.png'></image>
+  </view>
+  <view class='fangyuanxx-r'>
+    <view class='fangyuanxx-r-name'>美的公园</view>
+    <view class='fangyuanxx-r-yj'>
+      <view class='fangyuanxx-r-yj-l'>佣金：登陆后可见</view>
+      <view class='fangyuanxx-r-yj-r'>9000
+        <span>元/m²</span>
+      </view>
+    </view>
+    <view class='fangyuanxx-r-dz'>徐州市-鼓楼区-下淀路</view>
+    <view class='fangyuanxx-r-bq'>
+      <view class='fangyuanxx-r-bqcon1'>
+        在售
+      </view>
+      <view class='fangyuanxx-r-bqcon'>
+        在售
+      </view>
+    </view>
+  </view>
+</view>
+<view class='fangyuanxx'>
+  <view class='fangyuanxx-l'>
+    <image src='{{apis}}/image/17.png'></image>
+  </view>
+  <view class='fangyuanxx-r'>
+    <view class='fangyuanxx-r-name'>美的公园</view>
+    <view class='fangyuanxx-r-yj'>
+      <view class='fangyuanxx-r-yj-l'>佣金：登陆后可见</view>
+      <view class='fangyuanxx-r-yj-r'>9000
+        <span>元/m²</span>
+      </view>
+    </view>
+    <view class='fangyuanxx-r-dz'>徐州市-鼓楼区-下淀路</view>
+    <view class='fangyuanxx-r-bq'>
+      <view class='fangyuanxx-r-bqcon1'>
+        在售
+      </view>
+      <view class='fangyuanxx-r-bqcon'>
+        在售
+      </view>
+    </view>
+  </view>
+</view>
+<view class='fangyuanxx'>
+  <view class='fangyuanxx-l'>
+    <image src='{{apis}}/image/17.png'></image>
+  </view>
+  <view class='fangyuanxx-r'>
+    <view class='fangyuanxx-r-name'>美的公园</view>
+    <view class='fangyuanxx-r-yj'>
+      <view class='fangyuanxx-r-yj-l'>佣金：登陆后可见</view>
+      <view class='fangyuanxx-r-yj-r'>9000
+        <span>元/m²</span>
+      </view>
+    </view>
+    <view class='fangyuanxx-r-dz'>徐州市-鼓楼区-下淀路</view>
+    <view class='fangyuanxx-r-bq'>
+      <view class='fangyuanxx-r-bqcon1'>
+        在售
+      </view>
+      <view class='fangyuanxx-r-bqcon'>
+        在售
+      </view>
+    </view>
+  </view>
+</view>
+

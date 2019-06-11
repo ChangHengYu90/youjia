@@ -1,0 +1,36 @@
+
+<view class="container">
+
+  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="" catchtap='golookxq' id = "{{item.id}}">
+
+    <view class="content">
+      <view class='fangyuanxx'>
+  <view class='fangyuanxx-l'>
+    <image src='{{item.image}}'></image>
+  </view>
+  <view class='fangyuanxx-r'>
+    <view class='fangyuanxx-r-name'>{{item.name}}</view>
+    <view class='fangyuanxx-r-yj'>
+      <view class='fangyuanxx-r-yj-l'>佣金：{{item.rate}}</view>
+      <view class='fangyuanxx-r-yj-r'>{{item.averagePrice}}
+        <span>元/m²</span>
+      </view>
+    </view>
+    <view class='fangyuanxx-r-dz'>{{item.district}}</view>
+    <view class='fangyuanxx-r-bq'>
+      <view class='fangyuanxx-r-bqcon1'>
+        {{item.saleStateName}}
+      </view>
+      <view class='fangyuanxx-r-bqcon'>
+        {{item.propertyTypeName}}
+      </view>
+    </view>
+  </view>
+</view>
+    </view>
+
+    <view class="del" catchtap="del" data-index="{{index}}" id="{{item.id}}">删除</view>
+
+  </view>
+
+</view>

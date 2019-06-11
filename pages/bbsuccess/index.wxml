@@ -1,0 +1,9 @@
+<view class='top'>
+<image src='{{apis}}/image/37.png'></image>
+</view>
+<view class='toptsc' wx:if="{{type==1}}">您已成功报备客户</view>
+<view class='toptsc' wx:if="{{type==2}}">您已成功报备楼盘</view>
+<view class='aj'>
+<view class='aj-t' catchtap='goshouye'>返回首页</view>
+<view class='aj-b' catchtap='gockjl'>查看进程</view>
+</view>

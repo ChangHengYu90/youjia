@@ -1,0 +1,36 @@
+.message{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eee;
+}
+.message-l{
+  width: 100rpx;
+  padding-top: 30rpx;
+}
+.message-l image{
+  width: 70rpx;
+  height:70rpx;
+}
+.message-r{
+  width: 590rpx;
+  padding-top: 30rpx;
+  font-size: 30rpx;
+  padding-bottom: 20rpx;
+}
+.time{
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 5rpx;
+}
+.zwsj{
+  width: 100%;
+  height: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #999;
+}

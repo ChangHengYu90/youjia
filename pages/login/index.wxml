@@ -1,0 +1,26 @@
+<view class='out'>
+  <view class='toppic'>
+    <image src='{{apis}}/image/17.png'></image>
+  </view>
+  <view class='zhanghao'>
+    <view class='zhanghao-l'>
+      <image src='{{apis}}/image/51.png'></image>
+    </view>
+    <view class='zhanghao-r'>
+      <input placeholder='请输入手机号' bindinput='hqphone' type='text'></input>
+    </view>
+  </view>
+  <view class='zhanghao'>
+    <view class='zhanghao-l'>
+      <image src='{{apis}}/image/52.png'></image>
+    </view>
+    <view class='zhanghao-r'>
+      <input placeholder='请输入密码' type='password' bindinput='hqpwd' maxlength='20'></input>
+    </view>
+  </view>
+  <view class='wjmm'>
+    <view catchtap='gowjmm'>忘记密码？</view>
+  </view>
+  <view class='submit' catchtap='godl'>登录</view>
+  <view class='zhuce' catchtap='gozhuce'>用户注册</view>
+</view> 

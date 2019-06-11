@@ -1,0 +1,28 @@
+<view class='top'>
+  <view class='top-t'>
+    <view class='top-t-l'>楼盘名称</view>
+    <view class='top-t-r'>{{lpname}}</view>
+  </view>
+  <view class='top-t'>
+    <view class='top-t-l'>客户姓名</view>
+    <view class='top-t-r'>
+      <input placeholder='请输入' maxlength='12' type="text" bindinput='hqname'></input>
+    </view>
+  </view>
+  <view class='top-t2'>
+    <view class='top-t-l'>客户手机</view>
+    <view class='top-t-r'>
+      <input placeholder='请输入' maxlength='11' type='number' bindinput='hqphone'></input>
+    </view>
+  </view>
+</view>
+<!-- <view class='khms'>
+  <view class='khms-t'>跟进记录(选填)</view>
+  <view class='khms-b'>
+    <textarea placeholder='填写客户跟进记录...' maxlength='500' bindinput='hqgjjl'></textarea>
+  </view>
+</view> -->
+<view class='bottomkb'></view>
+<view class='bottom'>
+<view class='bottomcon' catchtap='submit'>添加</view>
+</view>

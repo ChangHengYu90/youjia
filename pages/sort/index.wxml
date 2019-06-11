@@ -1,0 +1,67 @@
+<import src="../../template/index.wxml" />
+  <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<view class='sort' style="background-image: url('{{apis}}/image/cjlphb.png');">
+<view class='sx'>
+ <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[lxindex]}}
+      <image src='{{apis}}/image/32.png'></image>
+    </view>
+  </picker>
+</view>
+</view>
+<view class='sorttype'>
+  <view class='sorttype-l' catchtap='choosetype' id='1'>
+    <view class="{{typeid==1?'sorttype-xz':'sorttype-wxz'}}">经纪人</view>
+  </view>
+  <view class='sorttype-z'></view>
+  <view class='sorttype-l' catchtap='choosetype' id='2'>
+    <view class="{{typeid==2?'sorttype-xz':'sorttype-wxz'}}">机构</view>
+  </view>
+</view>
+<view class='sortlist' style="height: {{windowHeight}}px;">
+  <scroll-view scroll-y style="height: {{windowHeight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class='list' wx:for="{{list}}" wx:key="*" wx:for-index='index' >
+      <view class='list-l'>
+        <view class='list-l-l'>
+        <block wx:if="{{index==0}}">
+        
+          <image src='{{apis}}/image/22.png'></image>
+            </block>
+        <block wx:if="{{index==1}}">
+          <image src='{{apis}}/image/23.png'></image>
+          </block>
+             <block wx:if="{{index==2}}">
+          <image src='{{apis}}/image/24.png'></image>
+          </block> 
+          <block wx:if="{{index>2}}">
+              <block wx:if="{{index<9}}">
+              0{{index+1}}
+               </block> 
+               <block wx:if="{{index>9}}">
+              {{index+1}}
+               </block> 
+          </block>
+        </view>
+        <view class='list-l-z'  wx:if="{{typeid==1}}">
+          <image src='{{item.headImg}}'></image>
+        </view>
+        <view class='list-l-r'>
+          <view class='list-l-r-t'>
+            {{item.name}}
+          </view>
+          <view class='list-l-r-b'>
+            {{item.mobile}}
+          </view>
+        </view>
+      </view>
+      <view class='list-r'>
+        <view class='list-r-t' wx:if="{{lxindex==0}}">到访</view>
+        <view class='list-r-t' wx:if="{{lxindex==1}}">成交</view>
+        <view class='list-r-b'>{{item.count}}</view>
+      </view>
+
+    </view>
+   
+  </scroll-view>
+</view>

@@ -1,0 +1,34 @@
+.icon{
+  width:45rpx;
+  height: 45rpx;
+}
+.tabBar{
+  width:100%;
+  position: fixed;
+  bottom:0;
+  padding:10rpx;
+  margin-left:-4rpx;
+  background:#F7F7FA;
+  font-size:30rpx;
+  color:#8A8A8A;
+  box-shadow: 6rpx 6rpx 6rpx 6rpx #aaa;
+  padding-bottom: 20rpx;
+  z-index: 99;
+}
+
+ .tabBar-item{
+  float:left;
+  width:25%;
+  text-align: center;
+  overflow: hidden;
+}
+ .tabBar-item2{
+  float:left;
+  width:20%;
+  text-align: center;
+  overflow: hidden;
+}
+/*当前字体颜色*/
+.tabBartext{
+  color:red;
+}

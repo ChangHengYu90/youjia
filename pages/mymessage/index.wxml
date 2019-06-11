@@ -1,0 +1,12 @@
+<view class='message' wx:for="{{messagelist}}" wx:key="*">
+  <view class='message-l'>
+    <image src='{{apis}}/image/50.png'></image>
+  </view>
+  <view class='message-r'>
+    {{item.content}}
+    <view class='time'>{{item.addTime}}</view>
+  </view>
+</view>
+<view wx:if="{{messagelist.length==0}}" class='zwsj'>
+暂无消息
+</view>

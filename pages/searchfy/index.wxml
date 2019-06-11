@@ -1,0 +1,19 @@
+<view class='mdtop'>
+  <view class='mdtop-l'>
+    <view class='mdtop-l-l'>
+      <image src='{{apis}}/image/sousuo.png'></image>
+    </view>
+    <input placeholder='请输入门店名称'></input>
+  </view>
+  <view class='mdtop-r'>取消</view>
+</view>
+<view class='ssls'>
+<view class='ssls-l'>搜索历史</view>
+<view class='ssls-r'>
+<image src='{{apis}}/image/33.png'></image>
+ 删除
+</view>
+</view>
+<view class='mdtopkb'></view>
+<view class='sscon'>万科</view>
+<view class='sscon'>万达</view>

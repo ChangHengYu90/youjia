@@ -1,0 +1,354 @@
+<import src="../../template/index.wxml" />
+<block wx:if="{{usertype==1}}">
+  <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+  <view class='top' style="background-image: url('{{apis}}/image/topbj.png')">
+    <view class='top-tnamekb'></view>
+    <view class='top-tname'>{{jgshuju.user.companyName}}</view>
+    <view class='topyqm'>
+      <view class='topyqm-l'>
+        <span>邀请码</span>{{jgshuju.user.inviteCode}}</view>
+      <view class='topyqm-r' catchtap='fuzhi' id='{{jgshuju.user.inviteCode}}'>复制</view>
+    </view>
+    <view class='topnum'>
+      <view class='topnumcon1' catchtap='lookljba' id='1'>
+        <view class='topnumcon-t'>{{jgshuju.reportData.reportCount}}</view>
+        <view class='topnumcon-b'>累计报备</view>
+      </view>
+      <view class='topnumcon1' catchtap='lookljba' id='2'>
+        <view class='topnumcon-t'>{{jgshuju.reportData.visitCount}}</view>
+        <view class='topnumcon-b'>累计到访</view>
+      </view>
+      <view class='topnumcon1' catchtap='lookljba' id='4'>
+        <view class='topnumcon-t'>{{jgshuju.reportData.turnoverCount}}</view>
+        <view class='topnumcon-b'>累计成交</view>
+      </view>
+      <view class='topnumcon2' catchtap='lookljba' id='5'>
+        <view class='topnumcon-t'>{{jgshuju.reportData.commissionCount}}</view>
+        <view class='topnumcon-b'>累计结佣</view>
+      </view>
+    </view>
+  </view>
+  <view class='riqi'>
+
+    <view class='riqi-l' catchtap='choosemd'>
+      <view class='riqi-lcon'>{{mdlist[mdindex].name}}</view>
+      <image src='{{apis}}/image/dowsj.png'></image>
+    </view>
+    <view class='riqi-r'>
+      <picker mode="date" value="{{endtime}}" end="{{endtime}}" fields='month' bindchange="bindDateChange">
+        <view class='riqi-lcon'>{{choosetime}}</view>
+      </picker>
+      <image src='{{apis}}/image/dowsj.png'></image>
+    </view>
+    <cover-view class='mddw' wx:if="{{mdisshow==2}}">
+      <cover-view class='mddwcon' wx:for="{{mdlist}}" wx:key='*' wx:for-index='index' catchtap='choosemdcon' data-index='{{index}}' id='{{item.id}}'>
+        <cover-view class="{{meid==item.id?'mddwcon-l2':'mddwcon-l'}}">{{item.name}}</cover-view>
+        <cover-view class='mddwcon-r' wx:if="{{meid==item.id}}">
+          <cover-image src='{{apis}}/image/duihao.png'></cover-image>
+        </cover-view>
+      </cover-view>
+
+    </cover-view>
+
+  </view>
+  <view class='tjb'>
+
+    <view class='tjbcon' catchtap='lookjgljba'>
+      <view class='tjb-dw'>
+        <image src='{{apis}}/image/1.png'></image>
+      </view>
+      <view class="container">
+        <canvas canvas-id="ringCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
+      </view>
+      <view class='tbtype'>
+        <view class='tbtype-con'>
+          <view class='tbtype-con-l' style='background-color: #4ab35c;'></view>
+          <view class='tbtype-con-r'>已报备({{jgshuju.stateReport.reportCount}})</view>
+        </view>
+        <view class='tbtype-con'>
+          <view class='tbtype-con-l' style='background-color: #f4e969;'></view>
+          <view class='tbtype-con-r'>已到访({{jgshuju.stateReport.visitCount}})</view>
+        </view>
+        <view class='tbtype-con'>
+          <view class='tbtype-con-l' style='background-color: #f1b34e;'></view>
+          <view class='tbtype-con-r'>已认购({{jgshuju.stateReport.subscribeCount}})</view>
+        </view>
+        <view class='tbtype-con'>
+          <view class='tbtype-con-l' style='background-color: #f3417c;'></view>
+          <view class='tbtype-con-r'>已成交({{jgshuju.stateReport.turnoverCount}})</view>
+        </view>
+        <view class='tbtype-con'>
+          <view class='tbtype-con-l' style='background-color: #108ee9;'></view>
+          <view class='tbtype-con-r'>已结佣({{jgshuju.stateReport.commissionCount}})</view>
+        </view>
+        <view class='tbtype-con'>
+          <view class='tbtype-con-l' style='background-color: #d2d2d2;'></view>
+          <view class='tbtype-con-r'>已失效({{jgshuju.stateReport.loseEfficacyCount}})</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</block>
+<block wx:if="{{usertype==2}}">
+  <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+  <view class='jld' style="background-image: url('{{apis}}/image/13.png')">
+    <view class='jldcjnum'>
+      <view class='jldcjnumcon' catchtap='lookljba' id='1'>
+        <view class='jldcjnumcon-t'>{{xmjl.reportCount}}</view>
+        <view class='jldcjnumcon-b'>
+          <image src='{{apis}}/image/14.png'></image>
+          累计报备</view>
+      </view>
+      <view class='jldcjnumcon2' catchtap='lookljba' id='2'>
+        <view class='jldcjnumcon-t'>{{xmjl.visitCount}}</view>
+        <view class='jldcjnumcon-b'>
+          <image src='{{apis}}/image/15.png'></image>
+          累计到访</view>
+      </view>
+      <view class='jldcjnumcon' catchtap='lookljba' id='4'>
+        <view class='jldcjnumcon-t'>{{xmjl.turnoverCount}}</view>
+        <view class='jldcjnumcon-b'>
+          <image src='{{apis}}/image/16.png'></image>
+          总成交</view>
+      </view>
+    </view>
+  </view>
+  <view class='fangyuan' wx:for="{{lplist}}" wx:key="*" catchtap='golookxmxq' id='{{item.id}}'>
+    <view class='fangyuan-t'>
+      <view class='fangyuan-t-l'>
+        <image src='{{item.image}}'></image>
+      </view>
+      <view class='fangyuan-t-r'>
+        <view class='fangyuan-t-r-t'>{{item.name}}</view>
+        <view class='fangyuan-t-r-b'>{{item.district}}</view>
+      </view>
+    </view>
+    <view class='fangyuan-b'>
+      <view class='fangyuan-b-con' catchtap='golooklpbb' data-state='0' id='{{item.id}}'>
+        <view class='fangyuan-b-con-t'>
+          {{item.waitCount}}
+        </view>
+        <view class='fangyuan-b-con-b'>
+          待确认
+        </view>
+      </view>
+      <view class='fangyuan-b-con2' catchtap='golooklpbb' data-state='1' id='{{item.id}}'>
+        <view class='fangyuan-b-con-t'>
+          {{item.reportCount}}
+        </view>
+        <view class='fangyuan-b-con-b'>
+          报备
+        </view>
+      </view>
+      <view class='fangyuan-b-con2' catchtap='golooklpbb' data-state='2' id='{{item.id}}'>
+        <view class='fangyuan-b-con-t'>
+          {{item.visitCount}}
+        </view>
+        <view class='fangyuan-b-con-b'>
+          到访
+        </view>
+      </view>
+      <view class='fangyuan-b-con' catchtap='golooklpbb' data-state='4' id='{{item.id}}'>
+        <view class='fangyuan-b-con-t'>
+          {{item.turnoverCount}}
+        </view>
+        <view class='fangyuan-b-con-b'>
+          成交
+        </view>
+      </view>
+    </view>
+  </view>
+
+</block>
+<block wx:if="{{usertype==3}}">
+  <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+  <view class='jjrtop' style="background-image: url('{{apis}}/image/topbj.png')">
+    <view class='jjrtop-t'>
+      <view class='citydw' catchtap='gochoosecity'>
+        <image src='{{apis}}/image/dizhi.png'></image>
+        {{city}}</view>
+      <view class='jjrtop-t-l' wx:if="{{jjrshuju.user.mobile!=''}}">
+        <image src='{{jjrshuju.user.headImg}}'></image>
+      </view>
+      <view class='jjrtop-t-l' wx:else>
+        <image src='{{apis}}/image/64.png'></image>
+      </view>
+      <view class='jjrtop-t-r'>
+        <block wx:if="{{jjrshuju.user.mobile!=''}}">
+          <view class='jjrtop-t-r-t'>
+            {{jjrshuju.user.mobile}}
+          </view>
+          <view class='jjrtop-t-r-b' wx:if="{{grxx.institutionName!=''}}">
+            <image src='{{apis}}/image/shenfenzheng.png'></image>
+            {{grxx.institutionName}}
+          </view>
+          <view class='jjrtop-t-r-b' wx:if="{{grxx.institutionName==''}}">
+            <image src='{{apis}}/image/shenfenzheng.png'></image>
+            {{grxx.typeName}}
+          </view>
+        </block>
+        <view class='wdl' catchtap='gologin' wx:if="{{jjrshuju.user.mobile==''}}">未登录</view>
+      </view>
+    </view>
+    <view class='jjrtop-b'>
+      <view class='jjrtop-b-con' catchtap='lookljba' id='1'>
+        <view class='jjrtop-b-con-t'>
+          <view class='jjrtop-b-con-t-c'>
+            <image src='{{apis}}/image/25.png'></image>
+            报备
+          </view>
+        </view>
+        <view class='jjrtop-b-con-b'>{{jjrshuju.reportData.reportCount}}</view>
+      </view>
+      <view class='jjrtop-b-con' catchtap='lookljba' id='2'>
+        <view class='jjrtop-b-con-t'>
+          <view class='jjrtop-b-con-t-c'>
+            <image src='{{apis}}/image/26.png'></image>
+            到访
+          </view>
+        </view>
+        <view class='jjrtop-b-con-b'>{{jjrshuju.reportData.visitCount}}</view>
+      </view>
+      <view class='jjrtop-b-con' catchtap='lookljba' id='4'>
+        <view class='jjrtop-b-con-t'>
+          <view class='jjrtop-b-con-t-c'>
+            <image src='{{apis}}/image/27.png'></image>
+            成交
+          </view>
+        </view>
+        <view class='jjrtop-b-con-b'>{{jjrshuju.reportData.turnoverCount}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='sytype'>
+    <view class='sytype-con'>
+      <view class='sytype-con-con' catchtap='goallfy'>
+        <view class='sytype-con-con-t'>
+          <image src='{{apis}}/image/28.png'></image>
+        </view>
+        <view class='sytype-con-con-b'>
+          全部房源
+        </view>
+      </view>
+      <view class='sytype-con-con' catchtap='goyjbb'>
+        <view class='sytype-con-con-t'>
+          <image src='{{apis}}/image/29.png'></image>
+        </view>
+        <view class='sytype-con-con-b'>
+          一键报备
+        </view>
+      </view>
+      <view class='sytype-con-con' catchtap='gofd'>
+        <view class='sytype-con-con-t'>
+          <image src='{{apis}}/image/30.png'></image>
+        </view>
+        <view class='sytype-con-con-b'>
+          房贷计算
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='tuijianloupan'>
+    <view class='tuijianloupan-l'>
+      <image src='/image/tubiao303.png'></image>推荐楼盘</view>
+    <view class='tuijianloupan-r' catchtap='goallfy'>查看更多
+      <image src='/image/10.png'></image>
+    </view>
+  </view>
+  <view class='fangyuanxx' wx:for="{{jjrshuju.hourse}}" wx:key="*" id='{{item.id}}' catchtap='golooklp'>
+    <view class='fangyuanxx-l'>
+      <image src='{{item.image}}'></image>
+    </view>
+    <view class='fangyuanxx-r'>
+      <view class='fangyuanxx-r-name'>{{item.name}}</view>
+      <view class='fangyuanxx-r-yj'>
+        <view class='fangyuanxx-r-yj-l' wx:if="{{jjrshuju.user.mobile!=''}}">佣金：{{item.rate}}</view>
+        <view class='fangyuanxx-r-yj-l' wx:if="{{jjrshuju.user.mobile==''}}">佣金：登录后可见</view>
+        <view class='fangyuanxx-r-yj-r'>{{item.averagePrice}}
+          <span>元/m²</span>
+        </view>
+      </view>
+      <view class='fangyuanxx-r-dz'>{{item.district}}</view>
+      <view class='fangyuanxx-r-bq'>
+        <view class='fangyuanxx-r-bqcon1'>
+          {{item.saleStateName}}
+        </view>
+        <view class='fangyuanxx-r-bqcon'>
+          {{item.propertyTypeName}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+</block>
+<block  wx:if="{{usertype==4}}">
+
+  <view class='zytop' style="background-image: url('{{apis}}/image/topbj.png')">
+    <view class='zytop-l' catchtap='choosepic'>
+      <image src='{{zygrxx.headImg}}' wx:if="{{zygrxx.mobile!=''}}"></image>
+      <image src='{{apis}}/image/64.png' wx:else></image>
+    </view>
+    <view class='zytop-z'>
+      <view class='zytop-zcon'>{{zygrxx.name}}</view>
+      <view class='zytop-zcon'>
+        <image src='/image/guwen.png'></image>
+        置业顾问
+      </view>
+      <view class='zytop-zcon'>
+        <image src='/image/loupan.png'></image>
+        {{zygrxx.housingResourcesName}}
+      </view>
+    </view>
+    <view class='zytop-r'>
+      <view class='zytop-rcon' catchtap='gosetup'>
+        <image src='/image/shezhi.png'></image>
+        设置
+      </view>
+    </view>
+  </view>
+  <view class='zyss'>
+    <view class='zysscon'>
+      <view class='zysscon-l'>
+        <image src='{{apis}}/image/sousuo.png'></image>
+        <input placeholder='请输入客户姓名' type='text' confirm-type ='search' bindconfirm = 'gosearch'></input>
+      </view>
+      <view class='zysscon-r'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+            <image src='/image/32.png'></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class='zygjjl' wx:for="{{grxx}}" wx:key="*">
+    <view class='zygjjl-l'>
+      <view class='zygjjl-lcon'>
+        <image src='/image/zytx.png'></image>
+        <span>{{item.name}}</span>
+      </view>
+      <view class='zygjjl-lcon'>
+        <image src='/image/zyphone.png'></image>
+        {{item.mobile}}
+      </view>
+      <view class='zygjjl-lcon'>
+        <image src='/image/zytime.png'></image>
+        录入时间:
+        <span>{{item.date}}</span>
+      </view>
+    </view>
+    <view class='zygjjl-r'>
+      <view class="{{item.isValid==0?'zygjjl-rcon2':'zygjjl-rcon'}}" catchtap='gogjjl' data-id="{{item.id}}" data-name="{{item.name}}" data-phone="{{item.mobile}}">跟进记录</view>
+    </view>
+    <view class='zyysx' wx:if="{{item.isValid==0}}">
+    <image src='/image/zyysx.png'></image>
+    </view>
+  </view>
+  <view class='zwsj' wx:if="{{grxx.length==0}}">暂无数据</view>
+  <view class='zybottom'>
+    <image src='/image/zyadd.png' catchtap='goaddzy'></image>
+  </view>
+</block>
+<view class='dbkb'></view>

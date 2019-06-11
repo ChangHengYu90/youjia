@@ -1,0 +1,17 @@
+<view class='mdtop'>
+  <view class='mdtop-l'>
+    <view class='mdtop-l-l'>
+      <image src='{{apis}}/image/sousuo.png'></image>
+    </view>
+    <input placeholder='请输入客户姓名，手机号'  type='text' confirm-type='search' bindconfirm='gosearch'></input>
+  </view>
+
+</view>
+<view class='mdtopkb'></view>
+<view class='txl' wx:for="{{items}}" wx:key="*">
+  <view class='txl-l'>
+    <view class='txl-l-t'>{{item.name}}</view>
+    <view class='txl-l-b'>{{item.mobile}}</view>
+  </view>
+  <view class='txl-r' catchtap='goxz' id='{{item.id}}' data-name="{{item.name}}" data-phone="{{item.mobile}}" >选择</view>
+</view>

@@ -1,0 +1,68 @@
+<import src="../../template/index.wxml" />
+  <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<view class='toppic'> 
+  <image src='{{apis}}/image/38.png'></image>
+  <view class='typedw'>
+    <view class='typedwcon'>
+      <view class='typedwcon-c' catchtap='txl'>
+        <view class='typedwcon-c-t'>
+          <image src='{{apis}}/image/39.png'></image>
+        </view>
+        <view class='typedwcon-c-b'>
+          客户通讯录
+        </view>
+      </view>
+      <view class='typedwcon-c' catchtap='gobblp'>
+        <view class='typedwcon-c-t'>
+          <image src='{{apis}}/image/40.png'></image>
+        </view>
+        <view class='typedwcon-c-b'>
+          报备楼盘
+        </view>
+      </view>
+      <view class='typedwcon-c' catchtap='goywlc'>
+        <view class='typedwcon-c-t'>
+          <image src='{{apis}}/image/41.png'></image>
+        </view>
+        <view class='typedwcon-c-b'>
+          业务进程
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='dwjl'></view>
+<view class='numcon'>
+  <view class='numcon-c'>
+    <view class='numcon-c-t' catchtap='golookbybb' id='3'>
+      <view class='numcon-c-t-l'>
+      <image src='{{apis}}/image/42.png'></image>
+      累计成交
+      </view>
+      <view class='numcon-c-t-r'>{{kh.turnoverCount}}</view>
+    </view>
+    <view class='numcon-c-b' catchtap='golookbybb' id='1'>
+      <view class='numcon-c-t-l'>
+      <image src='{{apis}}/image/43.png'></image>
+      本月报备
+      </view>
+      <view class='numcon-c-t-r'>{{kh.monthReportCount}}</view>
+    </view>
+    <view class='numcon-c-t' catchtap='golookbybb' id='2'>
+      <view class='numcon-c-t-l'>
+      <image src='{{apis}}/image/44.png'></image>
+      本月到访
+      </view>
+      <view class='numcon-c-t-r'>{{kh.monthVisitCount}}</view>
+    </view>
+  </view>
+</view>
+<view class='dbkb'></view>
+<view class='tcc' wx:if="{{isshowid==0}}">
+  <view class='tcccon'>
+    <view class='tcccon-t'>您还未登录，请先登录</view>
+    <view class='tcccon-b'>
+      <view catchtap='gologin'>去登录</view>
+    </view>
+  </view>
+</view>

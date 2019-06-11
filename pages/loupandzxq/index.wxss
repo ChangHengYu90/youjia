@@ -1,0 +1,52 @@
+/* pages/loupandzxq/index.wxss */
+.type{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.type-c{
+  width: 125rpx;
+}
+.type-c-t{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type-c-t image{
+  width: 40rpx;
+  height: 40rpx;
+ 
+}
+.type-c-b{
+  width: 100%;
+  font-size: 24rpx;
+  text-align: center;
+}
+.dw{
+  width: 120rpx;
+  height: 150rpx;
+  position: fixed;
+  bottom: 70px;
+  right: 10px
+}
+.dw-t{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dw-t cover-image{
+  width: 95rpx;
+  height: 95rpx;
+}
+.dw-b{
+  width: 100%;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  margin-top: 10rpx;
+}

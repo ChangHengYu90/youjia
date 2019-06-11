@@ -1,0 +1,31 @@
+<view class="lpxx"><view class='lpxx-l'>楼盘名称：</view><view class='lpxx-r'>{{lpxx.name}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>开  发  商： </view><view class='lpxx-r'>{{lpxx.developer}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>楼盘均价：</view><view class='lpxx-r'>{{lpxx.averagePrice}}元/m²</view></view>
+<view class="lpxx"><view class='lpxx-l'>楼盘状态：</view><view class='lpxx-r'>{{lpxx.saleStateName}}</view></view>
+<!-- <view class="lpxx"><view>物业类型：</view>{{lpxx.averagePrice}}</view> -->
+<view class="lpxx"><view class='lpxx-l'>开盘时间：</view><view class='lpxx-r'>{{lpxx.openingDate}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>交房时间：</view><view class='lpxx-r'>{{lpxx.deliveryDate}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>楼盘区域：</view><view class='lpxx-r'>{{lpxx.address}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>楼盘地址：</view><view class='lpxx-r'>{{lpxx.district}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>售楼地址：</view><view class='lpxx-r'>{{lpxx.salesOfficeAddress}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>建筑类型：</view><view class='lpxx-r'>{{lpxx.buildingTypeName}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>产权年限：</view><view class='lpxx-r'>{{lpxx.propertyRightYears}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>装修标准：</view><view class='lpxx-r'>{{lpxx.decorationStandardName}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>占地面积：</view><view class='lpxx-r' wx:if="{{lpxx.floorSpace!=''}}">{{lpxx.floorSpace}}m²</view>
+<view class='lpxx-r' wx:if="{{lpxx.floorSpace==''}}">{{lpxx.floorSpace}}</view>
+</view>
+<view class="lpxx"><view class='lpxx-l'>建筑面积：</view><view class='lpxx-r'  wx:if="{{lpxx.coveredArea!=''}}">{{lpxx.coveredArea}}m²</view>
+<view class='lpxx-r'  wx:if="{{lpxx.coveredArea==''}}">{{lpxx.coveredArea}}</view>
+</view>
+<view class="lpxx"><view class='lpxx-l'>容 积 率：</view><view class='lpxx-r' wx:if="{{lpxx.plotRatio!=''}}">{{lpxx.plotRatio}}%</view></view>
+<view class="lpxx"><view class='lpxx-l'>绿 化 率：</view><view class='lpxx-r' wx:if="{{lpxx.greeningRate!=''}}">{{lpxx.greeningRate}}%</view></view>
+<view class="lpxx"><view class='lpxx-l'>规划户数：</view><view class='lpxx-r'>{{lpxx.household}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>规划栋数：</view><view class='lpxx-r'>{{lpxx.ridgepole}}</view></view>
+<view class="lpxx"><view class='lpxx-l'>规划车位：</view><view class='lpxx-r'>{{lpxx.parkingPlace}}</view></view>
+<view class='bottomkb'  wx:if="{{isshow!=2}}"></view>
+<view class='bottom' wx:if="{{isshow!=2}}">
+<view catchtap='gophone'>
+<image src='{{apis}}/image/36.png'  ></image>
+项目经理
+</view>
+</view>

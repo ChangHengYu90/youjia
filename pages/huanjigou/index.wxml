@@ -1,0 +1,29 @@
+<view class='top'>
+  <view class='topcon' catchtap='choosetype' id='2'>
+    <view class="{{dktype==2?'topcon-c2':'topcon-c'}}">机构经纪人</view>
+  </view>
+  <view class='topcon' catchtap='choosetype' id='3'>
+    <view class="{{dktype==3?'topcon-c2':'topcon-c'}}">独立经纪人</view>
+  </view>
+
+</view>
+<view class='topkb'></view>
+<!-- <view class='content'>
+<view class='content-c'>
+  <view class='content-c-t'>请输入机构邀请码</view>
+</view>
+</view> -->
+<view class='addcon' wx:if="{{dktype==2}}">
+  <view class='addcon-t'>请输入机构邀请码</view>
+  <view class='addcon-srk'>
+    <input placeholder='邀请码' bindinput='hqyqm' ></input>
+  </view>
+  <view class='submit' catchtap='submit'>确定提交</view>
+</view>
+<view class='addcon' wx:if="{{dktype==3}}">
+  <view class='addcon-t'>请输入推荐人邀请码</view>
+  <view class='addcon-srk'>
+    <input placeholder='推荐人邀请码' bindinput='hqyqm' ></input>
+  </view>
+  <view class='submit' catchtap='submit'>确定提交</view>
+</view>

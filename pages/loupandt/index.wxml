@@ -1,0 +1,27 @@
+<import src="../../template/index.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<view class='zxdt' wx:for='{{loupanlist}}' wx:key="*">
+
+  <view class='zxdt-time' catchtap='golookdtxq' id='{{item.id}}'>{{item.date}}</view>
+  <view class='zxdt-js' catchtap='golookdtxq' id='{{item.id}}'>{{item.title}}</view>
+  <view class='zxdt-tp' catchtap='golookdtxq' id='{{item.id}}'>
+    <image src='{{child}}' wx:for="{{item.imageList}}" wx:key="*" wx:for-item="child"></image>
+  </view>
+ 
+  <!-- 有的地方显示 -->
+  <view class='loupan' wx:if="{{loupanid==''}}" id='{{item.hourseInfo.id}}' catchtap='golookxq' wx:if="{{type!=1}}">
+    <view class='loupan-l'>
+      <image src='{{item.hourseInfo.image}}'></image>
+    </view>
+    <view class='loupan-r'>
+      <view class='loupan-r-t'>
+        {{item.hourseInfo.name}}
+      </view>
+      <view class='loupan-r-b'>
+        {{item.hourseInfo.district}}
+      </view>
+    </view>
+  </view>
+</view>
+<view class='zwsj' wx:if="{{loupanlist.length==0}}">暂无数据</view>
+<view class='dbkb'></view>

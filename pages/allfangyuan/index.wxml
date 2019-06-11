@@ -1,0 +1,160 @@
+<view class='top'>
+  <view class='top-t'>
+    <view class='top-tcon'>
+      <view class='top-tcon-l'  catchtap='choosecity'>
+        <view class='top-tcon-l-l'>
+          <image src='{{apis}}/image/18.png'></image>
+        </view>
+        <view class='top-tcon-l-r'>
+          {{quyu.name}}
+        </view>
+        <view class='top-tcon-l-rpic'>
+          <image src='{{apis}}/image/31.png'></image>
+        </view>
+      </view>
+      <view class='top-tcon-r'>
+        <view class='top-tcon-r-l'>
+          <image src='{{apis}}/image/sousuo.png'></image>
+        </view>
+        <view class='top-tcon-r-r'>
+          <input placeholder='请输入楼盘名称' type='text' confirm-type='search' bindconfirm='gosearch'></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='top-b'>
+    <view class="{{quyuname=='区域'?'top-bcon':'top-bcon yanse'}}" id='1' catchtap='choosetype'>
+      <view>
+      {{quyuname}}
+      </view>
+      <image src='{{apis}}/image/32.png' wx:if="{{quyuname=='区域'}}"></image>
+      <image src='{{apis}}/image/69.png' wx:if="{{quyuname!='区域'}}"></image>
+    </view>
+    <view class="{{lxname=='类型'?'top-bcon':'top-bcon yanse'}}" id='2' catchtap='choosetype'>
+       <view>
+      {{lxname}}
+      </view>
+     <image src='{{apis}}/image/32.png' wx:if="{{lxname=='类型'}}"></image>
+     <image src='{{apis}}/image/69.png' wx:if="{{lxname!='类型'}}"></image>
+    </view>
+    <view class="{{xzname=='性质'?'top-bcon':'top-bcon yanse'}}" id='3' catchtap='choosetype'>
+       <view>
+      {{xzname}}
+      </view>
+      <image src='{{apis}}/image/32.png' wx:if="{{xzname=='性质'}}"></image>
+     <image src='{{apis}}/image/69.png' wx:if="{{xzname!='性质'}}"></image>
+    </view>
+    <view class="{{sortid==0?'top-bcon2':'top-bcon2 yanse'}}" id='4' catchtap='choosetype'>
+    
+      <image src='{{apis}}/image/paixu.png' wx:if="{{sortid=='0'}}"></image>
+     <image src='{{apis}}/image/70.png' wx:if="{{sortid!='0'}}"></image>
+      排序
+     
+    </view>
+  </view>
+</view>
+<view class='topkb'></view>
+<!-- 区域选择 -->
+<view class='quyu' wx:if="{{isshowid==1}}">
+  <view class='quyu-l'>
+    
+    <view class="{{quyuindex==index?'quyu-lcon quyu-lcon2':'quyu-lcon'}}" wx:for="{{quyu.district}}" wx:key="*"  wx:for-index='index' id='{{item.id}}' catchtap='choosequ' data-index='{{index}}' >{{item.name}}</view>
+    <!-- <view class='quyu-lcon quyu-lcon2'>不限</view>
+    <view class='quyu-lcon'>不限</view> -->
+    
+  </view>
+  <view class='quyu-r'>
+    <view class='quyu-lcon' wx:for="{{quyu.district[quyuindex].urbanStreet}}" id='{{item.id}}' data-name='{{item.name}}' catchtap='choosejd'>{{item.name}}</view>
+   
+  </view>
+</view>
+<!-- 类型选择 -->
+<view class='leixing' wx:if="{{isshowid==2}}">
+  <view class='leixingcon' catchtap='chooselx' id='0' data-name='类型'>
+    <view class="{{lxid==0?'leixingcon-l leixingxz':'leixingcon-l'}}">不限</view>
+    <view class='leixingcon-r' wx:if="{{lxid==0}}">
+      <image src='{{apis}}/image/duihao.png'></image>
+    </view>
+  </view>
+  <view class='leixingcon' wx:for="{{leixing}}" wx:key='*' id='{{item.id}}'   catchtap='chooselx'  data-name='{{item.name}}' >
+    <view class="{{lxid==item.id?'leixingcon-l leixingxz':'leixingcon-l'}}">{{item.name}}</view>
+    <view class='leixingcon-r' wx:if="{{lxid==item.id}}">
+      <image src='{{apis}}/image/duihao.png'></image>
+    </view>
+  </view>
+
+</view>
+<!-- 性质选择 -->
+<view class='leixing' wx:if="{{isshowid==3}}" >
+  <view class='leixingcon'  catchtap='choosexz' id='0' data-name='性质'>
+    <view class="{{xzid==0?'leixingcon-l leixingxz':'leixingcon-l'}}">不限</view>
+    <view class='leixingcon-r' wx:if="{{xzid==0}}">
+      <image src='{{apis}}/image/duihao.png'></image>
+    </view>
+  </view>
+  <view class='leixingcon' wx:for="{{xingzhi}}" wx:key="*" catchtap='choosexz' id='{{item.id}}' data-name='{{item.name}}'>
+    <view class="{{xzid==item.id?'leixingcon-l leixingxz':'leixingcon-l'}}">{{item.name}}</view>
+    <view class='leixingcon-r' wx:if="{{xzid==item.id}}">
+      <image src='{{apis}}/image/duihao.png'></image>
+    </view>
+  </view>
+
+</view>
+<!-- 排序选择 -->
+<view class='leixing' wx:if="{{isshowid==4}}">
+  <view class='leixingcon' catchtap='choosepx' id='0'>
+    <view class="{{sortid==0?'leixingcon-l leixingxz':'leixingcon-l'}}" >默认排序</view>
+    <view class='leixingcon-r' wx:if="{{sortid==0}}">
+      <image src='{{apis}}/image/duihao.png'></image>
+    </view>
+  </view>
+  <view class='leixingcon' catchtap='choosepx' id='1'>
+    <view class="{{sortid==1?'leixingcon-l leixingxz':'leixingcon-l'}}">均价从低到高</view>
+    <view class='leixingcon-r'  wx:if="{{sortid==1}}">
+      <image src='{{apis}}/image/duihao.png'></image>
+    </view>
+  </view>
+  <view class='leixingcon' catchtap='choosepx' id='2'>
+    <view class="{{sortid==2?'leixingcon-l leixingxz':'leixingcon-l'}}">均价从高到低</view>
+    <view class='leixingcon-r'  wx:if="{{sortid==2}}">
+      <image src='{{apis}}/image/duihao.png'></image>
+    </view>
+  </view>
+  <view class='leixingcon' catchtap='choosepx' id='3'>
+    <view class="{{sortid==3?'leixingcon-l leixingxz':'leixingcon-l'}}">开盘时间从近到远</view>
+    <view class='leixingcon-r'  wx:if="{{sortid==3}}">
+      <image src='{{apis}}/image/duihao.png'></image>
+    </view>
+  </view>
+  <view class='leixingcon' catchtap='choosepx' id='4'>
+    <view class="{{sortid==4?'leixingcon-l leixingxz':'leixingcon-l'}}">开盘时间从远到近</view>
+    <view class='leixingcon-r'  wx:if="{{sortid==4}}">
+      <image src='{{apis}}/image/duihao.png'></image>
+    </view>
+  </view>
+  
+</view>
+<view class='fangyuanxx' wx:for="{{lplist}}" wx:key='*' catchtap='golookxq' id='{{item.id}}'>
+  <view class='fangyuanxx-l'>
+    <image src='{{item.image}}'></image>
+  </view>
+  <view class='fangyuanxx-r'>
+    <view class='fangyuanxx-r-name'>{{item.name}}</view>
+    <view class='fangyuanxx-r-yj'>
+      <view class='fangyuanxx-r-yj-l' wx:if="{{isdl==''}}" >佣金：登陆后可见</view>
+      <view class='fangyuanxx-r-yj-l' wx:if="{{isdl!=''}}" >佣金：{{item.rate}}</view>
+      <view class='fangyuanxx-r-yj-r'>{{item.averagePrice}}
+        <span>元/m²</span>
+      </view>
+    </view>
+    <view class='fangyuanxx-r-dz'>{{item.district}}</view>
+    <view class='fangyuanxx-r-bq'>
+      <view class='fangyuanxx-r-bqcon1'>
+         {{item.saleStateName}}
+      </view>
+      <view class='fangyuanxx-r-bqcon'>
+        {{item.propertyTypeName}}
+      </view>
+    </view>
+  </view>
+</view>

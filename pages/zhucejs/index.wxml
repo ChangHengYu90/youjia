@@ -1,0 +1,5 @@
+<view class='type' catchtap='gozhuce' id='1'>全民经纪人</view>
+<view class='type' catchtap='gozhuce' id='2'>机构经纪人</view>
+<view class='type' catchtap='gozhuce' id='3'>独立经纪人</view>
+<!-- <view class='type'>机构组织</view> -->
+

@@ -1,0 +1,13 @@
+<view class='setup' catchtap='goxgpwd'>
+  <view class='setup-l'>修改密码</view>
+  <view class='setup-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view class='setup' catchtap='goaboutus'>
+  <view class='setup-l'>关于我们</view>
+  <view class='setup-r'>
+    <image src='{{apis}}/image/10.png'></image>
+  </view>
+</view>
+<view class='bottom' catchtap='tuichu'>退出账号</view>
